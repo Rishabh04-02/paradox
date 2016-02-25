@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Sans-serif;
+  background: #2c3e50;
+}
+
+#wrap {
+  margin: 0 auto 30px;
+}
+
+#regbar {
+  height: 67px;
+  background: #34495e;
+}
+
+#navthing {
+  height:65px;
+  width:1150px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  position: relative;
+}
+
+
+h2 {
+  padding: 20px;
+  color: #ecf0f1;
+}
+#hd
+{
+  font-size: 40px;
+  position:absolute;
+  left:450px;
+}
+.changep
+{
+  height: 500px;
+  width:600px;
+  position:relative;
+  margin-right: auto;
+  margin-left: auto;
+  top:50px;
+}
+.textfield
+{
+  width:220px;
+  height:35px;
+  border-radius: 30px;
+  font-size: 20px;
+}
+table
+{
+  height:180px;
+  width:380px;
+  margin:10px;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+#cap
+{
+  font-size: 25px;
+  color:#c8cccf;
+  font-family:"Microsoft Sans Serif";
+  position: relative;
+  top:-5px;
+  margin:15px;
+}
+#button
+{
+  height:40px;
+  width:150px;
+  position:relative;
+  left:30px;
+  border-radius: 20px;
+  border-width:2px;
+  border-style:outset;
+  color: #2c3e50;
+  background-color: #ecf0f1;
+  font-family:"Microsoft Sans Serif";
+  font-size: 25px;
+}
+#button,.checkbut
+{
+  background       : rgb(236,240,241);
+    background-image :    -moz-linear-gradient(rgb(236,240,241),rgb(40,56,72));
+    background-image :     -ms-linear-gradient(rgb(236,240,241),rgb(40,56,72));
+    background-image :      -o-linear-gradient(rgb(236,240,241),rgb(40,56,72));
+    background-image : -webkit-linear-gradient(rgb(236,240,241),rgb(40,56,72));
+    background-image :         linear-gradient(rgb(236,240,241),rgb(40,56,72));
+}
+#button:hover,.checkbut:hover
+{
+  background       : rgb(236,240,241);
+    background-image :    -moz-linear-gradient(rgb(236,240,241),rgb(44,62,80));
+    background-image :     -ms-linear-gradient(rgb(236,240,241),rgb(44,62,80));
+    background-image :      -o-linear-gradient(rgb(236,240,241),rgb(44,62,80));
+    background-image : -webkit-linear-gradient(rgb(236,240,241),rgb(44,62,80));
+    background-image :         linear-gradient(rgb(236,240,241),rgb(44,62,80));
+}
+.cancelbut
+{
+  position:absolute;
+  top:323px;
+  left:100px;
+}
