@@ -1,5 +1,5 @@
 <?php
-  $con=mysqli_connect("localhost","root","","paradox");
+  $con=mysqli_connect("localhost","root","hey","paradox");
 	//$con=mysqli_connect("localhost","hillfh72_nimbus","nimbus@nith","hillfh72_nimbus_paradox");
 	if (!$con)
  	 {
