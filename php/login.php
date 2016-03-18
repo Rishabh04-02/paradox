@@ -1,5 +1,5 @@
 <?php
-	$con=mysqli_connect("localhost","root","hey","paradox");
+	$con=mysqli_connect("localhost","root","strongpassword","paradox");
 	if (!$con)
  	 {
  		 die('Could not connect: ' . mysqli_error());
@@ -17,7 +17,7 @@
      else
     {
     	$user=$_POST["user"];
-    	$pwd=md5(mysql_real_escape_string($_POST["password"]));
+    	$pwd=md5(mysqli_real_escape_string($con,$_POST["password"]));
     	$result=mysqli_query($con,"SELECT * FROM information where username='$user' and password='$pwd'");
       if(mysqli_num_rows($result)>0)
       {

@@ -1,5 +1,5 @@
 <?php
-	$con=mysqli_connect("localhost","root","hey","paradox");
+	$con=mysqli_connect("localhost","root","strongpassword","paradox");
 	if (!$con)
  	 {
  		 die('Could not connect: ' . mysqli_error());
@@ -14,6 +14,7 @@
     $result=mysqli_query($con,"SELECT * from information where username='$user'");
     $out=mysqli_fetch_array($result);
     $level=$out['level']+1;
+    $imgsrc = mysqli_query($con, "SELECT * FROM questions where level='$level'")
 ?>
 
 <!DOCTYPE  html>
@@ -104,7 +105,7 @@
 					<div class="clear"></div>
 					<div id="headline">
           <h1><b>Level <?php echo "$level";?></b></h1>
-						<img src="<?php echo $level; ?>.png" height="300px" width="750px"  />
+						<img src="<?php echo $imgsrc; ?>" height="300px" width="750px"  />
 						<br/>
             <div id="form">
 						<form action="submitres.php" method="post" name="paradox" onsubmit="return(validate());">
@@ -137,7 +138,7 @@
 						<li><a href="http://www.youtube.com" class="poshytip youtube" title="View our videos"></a></li>
 					</ul>
 					<!-- ENDS Social -->
-					<div id="to-top" class="poshytip" title="To top"></div>
+					
 				</div>
 				<!-- ENDS wrapper-bottom -->
 			</div>
