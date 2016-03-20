@@ -55,7 +55,7 @@
   </div>
 </div>
 <div class="image">
-  <img src="../images/poster1.PNG" width="600px" height="630px">
+  <img src="../images/1.png" width="600px" height="630px">
   <div>
 
   <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>

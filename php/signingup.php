@@ -1,5 +1,5 @@
 <?php
-	$con=mysqli_connect("localhost","root","","paradox");
+	$con=mysqli_connect("localhost","root","hey","paradox");
 	if (!$con)
  	 {
  		 die('Could not connect: ' . mysqli_error());
@@ -14,7 +14,7 @@
     {
     	$user=$_POST["user"];
     	$inst=$_POST["inst"];
-    	$pwd=$_POST["pwd1"];
+    	$pwd=md5(mysql_real_escape_string($_POST["pwd1"]));
     	$result=mysqli_query($con,"SELECT * FROM information where username='$user'");
     	if(mysqli_num_rows($result)>0)
     	{   

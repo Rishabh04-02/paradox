@@ -1,5 +1,5 @@
 <?php
-	$con=mysqli_connect("localhost","root","","paradox");
+	$con=mysqli_connect("localhost","root","hey","paradox");
 	if (!$con)
  	 {
  		 die('Could not connect: ' . mysqli_error());
@@ -17,7 +17,7 @@
      else
     {
     	$user=$_POST["user"];
-    	$pwd=$_POST["password"];
+    	$pwd=md5(mysql_real_escape_string($_POST["password"]));
     	$result=mysqli_query($con,"SELECT * FROM information where username='$user' and password='$pwd'");
       if(mysqli_num_rows($result)>0)
       {
@@ -65,7 +65,7 @@
                   color:#2c3e50;
                   font-weight: bold;
                   font-size: 20px;
-                  font-family:"Microsoft Sans Serif";
+                  font-family:"Ubuntu";
                 }
                 #but
                 {
@@ -82,7 +82,7 @@
                   color:white;
                   font-weight: bold;
                   font-size: 13px;
-                  font-family:"Microsoft Sans Serif";
+                  font-family:"Ubuntu";
                 }
          </style>
        </head>
