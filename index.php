@@ -7,7 +7,7 @@
 
   <title>Paradox</title>
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript">
       function validate()
       {
@@ -42,7 +42,7 @@
            <fieldset>
             <form action="login.php" method="post" name="login" onsubmit="return(validate());">
              <label name="user">Username</label>
-             <input type="text" name="user" value="" />
+             <input type="text" pattern="[a-z],[0-9]*" name="user" value="" />
              <label name="password">Password</label>
              <input type="password" name="password" />
              <input type="submit" value="Login" />
@@ -55,12 +55,12 @@
   </div>
 </div>
 <div class="image">
-  <img src="../images/1.png" width="600px" height="630px">
+  <img src="images/1.png" width="600px" height="630px">
   <div>
 
   <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
 
-  <script src="../js/index.js"></script>
+  <script src="js/index.js"></script>
 
 </body>
 

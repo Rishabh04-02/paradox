@@ -14,6 +14,10 @@
     $result=mysqli_query($con,"SELECT * from information where username='$user'");
     $out=mysqli_fetch_array($result);
     $level=$out['level']+1;
+
+    $img=mysqli_query($con,"SELECT question from questions where ind='$level'");
+    $outit=mysqli_fetch_array($img);
+  	$anss=md5(mysql_real_escape_string($outit['question']));
 ?>
 
 <!DOCTYPE  html>
@@ -104,7 +108,8 @@
 					<div class="clear"></div>
 					<div id="headline">
           <h1><b>Level <?php echo "$level";?></b></h1>
-						<img src="<?php echo $level; ?>.png" height="300px" width="750px"  />
+
+						<img src="<?php echo $anss; ?>" height="300px" width="750px"  />
 						<br/>
             <div id="form">
 						<form action="submitres.php" method="post" name="paradox" onsubmit="return(validate());">

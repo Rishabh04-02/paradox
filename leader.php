@@ -15,7 +15,7 @@
 <head>
 
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="../css/leader.css">
+  <link rel="stylesheet" href="css/leader.css">
    </head>
   <body>
   <div id="wrap">

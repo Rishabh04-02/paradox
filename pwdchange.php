@@ -16,7 +16,7 @@
 <html>
   <head>
     <title><?php echo $user; ?></title>
-    <link rel="stylesheet" type="text/css" href="../css/pwdchange.css">
+    <link rel="stylesheet" type="text/css" href="css/pwdchange.css">
     <script type="text/javascript">
       function validate()
       {

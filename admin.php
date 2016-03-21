@@ -18,6 +18,7 @@
 
 
 <?php
+
 	$con=mysqli_connect("localhost","root","hey","paradox");
 	if (!$con)
  	 {
@@ -26,11 +27,11 @@
   	}
   	
     else
-		{       $photo=md5(mysql_real_escape_string($_POST["photo"]));
-            $ans=md5(mysql_real_escape_string($_POST["ans"]));
+		{       $photo=$_POST["photo"];
+            $ans=$_POST["ans"];
             $a=$_POST["no"];
             echo "$a<br>$photo<br>$ans";
- 			      mysqli_query($con, "INSERT INTO questions VALUES('$a','$photo', '$ans')");
+ 			      mysqli_query($con, "INSERT INTO questions VALUES('$a',AES_ENCRYPT('$photo','key'), AES_ENCRYPT('$ans','key'))");
             
     }
 ?>
