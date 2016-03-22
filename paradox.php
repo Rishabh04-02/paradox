@@ -22,11 +22,9 @@
   	$anss=$out1['answer'];
   	$maxques=mysqli_query($con,"SELECT max(ind) from questions");
   	$maxx=mysqli_fetch_array($maxques);
-  	echo "hello";
-  	echo $maxx[0];
-
+  
   	$check=0;
-  	if (strcmp($anss, $answer)==0 && $level==23) {
+  	if (strcmp($anss, $answer)==0 && $level==$maxx[0]) {
   			$var="";
   			header("Location:end.php");
   	}
