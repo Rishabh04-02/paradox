@@ -38,7 +38,7 @@
   	}	
   	else{
   			if($answer!="")
-  				$var="Wrong answer. Please try again!";
+  				$var="Wrong answer, Please try again!";
   	}
 
 ?>
@@ -52,6 +52,7 @@
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/style2.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="css/social-icons.css" type="text/css" media="screen" />
 		
 		<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
@@ -93,11 +94,7 @@
 		<link rel="stylesheet" href="js/poshytip-1.0/src/tip-yellowsimple/tip-yellowsimple.css" type="text/css" />
 		<script type="text/javascript" src="js/poshytip-1.0/src/jquery.poshytip.min.js"></script>
 		<!-- ENDS poshytip -->
-		<style type="text/css">
-				#invalidres{
-					color: red;
-				}
-		</style>
+		
 		<script type="text/javascript">
 				function changeText()
 				{
@@ -159,9 +156,11 @@
             <div id="form">
 	<form id="para" action="" method="post" name="paradox"  onsubmit="return(validate());">
       <input type="text" placeholder="Your Answer Here" name="ans" id="txtfield" required >
+
    		 <?php 
-      	echo "<span id='invalidres'>{$var}</span>";
+      	echo "<span id='invalidres' class='something-Wrong'>{$var}</span>";
        ?>
+       
       <br/>
       <br>	
       <button type="submit" value="SUBMIT" id="subbutton" class="but" >Submit</button>
