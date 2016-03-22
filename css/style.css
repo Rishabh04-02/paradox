@@ -225,7 +225,9 @@ body {
 	margin-right: 32px;
 }
 
-#nav>li:first-child{}
+#nav>li:first-child{
+}
+
 
 #nav>li>a{
 	display: block;

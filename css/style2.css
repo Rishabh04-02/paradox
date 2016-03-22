@@ -31,6 +31,153 @@ body {
   color: #02bdd5;
   font-weight: 300;
 }
+/* these are my modifications */
+#title td tr{
+font-size: 12px;
+
+}
+.pen1-title {
+  padding: 50px 0;
+  color: #666666;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.pen1-title h1 {
+  margin: 0 0 20px;
+  font-size: 50px;
+  font-weight: 300;
+}
+.pen1-title h1 a{
+  margin: 0 0 20px;
+  font-size: 50px;
+  color: #666666;
+  text-decoration: none;
+  font-weight: 300;
+}
+.pen1-title h1 a:hover{
+  margin: 0 0 20px;
+  font-size: 50px;
+  text-decoration: none;
+  color: #02bdd5;
+  font-weight: 300;
+}
+.pen1-title h1:hover {
+  margin: 0 0 20px;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #02bdd5;
+  font-weight: 300;
+}
+
+.container1 {
+  position: relative;
+  max-width: 996px;
+  width: 100%;
+  margin: 0 auto 100px;
+}
+.container1 table{
+  text-align: center;
+}
+.container1 table td{
+  font-size: 25px;
+  text-decoration: none;
+  text-align: center;
+  padding-left: 140px;
+  color: #666666;
+  padding-right: 100px;
+}
+.container1 table td>h1{
+  text-align: center;
+  color: #02bdd5; 
+}
+/*   */
+.container2 {
+  position: relative;
+  max-width: 996px;
+  width: 100%;
+  margin: 0 auto 100px;
+}
+.container2 table{
+  text-align: center;
+}
+.container2 table td{
+  font-size: 25px;
+  text-decoration: none;
+  text-align: center;
+  padding-left: 150px;
+  color: #666666;
+  padding-right: 100px;
+}
+#icn img{
+  width: 100px;
+}
+#icn img:hover{
+width: 100px;
+box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
+}
+/*   */
+.container1.active .card:first-child {
+  background: #f2f2f2;
+  margin: 0 15px;
+}
+.container1.active .card:nth-child(2) {
+  background: #fafafa;
+  margin: 0 10px;
+}
+.container1.active .card.alt {
+  top: 20px;
+  right: 0;
+  width: 100%;
+  min-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  padding: 60px 0 40px;
+  overflow: hidden;
+}
+.container1.active .card.alt .toggle {
+  position: absolute;
+  top: 40px;
+  right: -70px;
+  box-shadow: none;
+  -webkit-transform: scale(10);
+  transform: scale(10);
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+.container1.active .card.alt .toggle:before {
+  content: '';
+}
+.container1.active .card.alt .title,
+.container1.active .card.alt .input-container,
+.container1.active .card.alt .button-container {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+.container1.active .card.alt .title {
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s;
+}
+.container1.active .card.alt .input-container {
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+}
+.container1.active .card.alt .input-container:nth-child(2) {
+  -webkit-transition-delay: .5s;
+          transition-delay: .5s;
+}
+.container1.active .card.alt .input-container:nth-child(3) {
+  -webkit-transition-delay: .6s;
+          transition-delay: .6s;
+}
+.container1.active .card.alt .button-container {
+  -webkit-transition-delay: .7s;
+          transition-delay: .7s;
+}
 
 
 /* Rerun */

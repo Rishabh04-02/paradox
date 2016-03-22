@@ -92,7 +92,7 @@
   <div class="card"></div>
   <div class="card">
     <h1 class="title">Login</h1>
-    <form action="" name="login" method="post" onsubmit="return(validate());">
+    <form action="loginafterregister.php" name="login" method="post" onsubmit="return(validate());">
       <div class="input-container">
         <input type="text" id="Username" name="user" required="required"/>
         <label for="Username">Username</label>
@@ -156,8 +156,14 @@
 
         <script src="js/index2.js"></script>
 
-
-
+<div id="icn" align="center">
+<br/><br/><br/><br/>
+<ul>
+  <li><a href="https://www.facebook.com/teamexe/" target="_blank"><img src="img/fb.png"></a> 
+  <a href="leader.php"><img src="img/bw.gif"></a> <a target="_blank" href="https://www.youtube.com/channel/UCTIpvLaM1G-uUsthgCDauKw">
+  <img src="img/yt.png"></a></li>
+</ul>
+</div>
 
   </body>
 </html>

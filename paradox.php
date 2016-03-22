@@ -114,9 +114,10 @@
 					<div class="wrapper">
 						<!-- Navigation -->
 						<ul id="nav" class="sf-menu">
-            <li><a href="">Paradox</a></li>
-							<li class="current-menu-item"><a href="">Welcome <?php echo $user; ?></a></li>
-							<li><a href="logout.php">Logout</a></li>
+            <li><a><h1>Paradox</h1></a></li>
+							<li class="current-menu-item"><a><h1>Welcome <?php echo $user; ?></h1></a></li>
+							<li><a href="logout.php"><button>Logout</button></a></li>
+							<li><a href="leader.php"><button>Leaderboard</button></a></li>
 						</ul>
 						<!-- Navigation -->
 					</div>
@@ -166,8 +167,8 @@
 					</div>
 					<!-- Social -->
 					<ul class="social ">
-						<li><a href="http://www.facebook.com/teamexe" target="_blank" class="poshytip  facebook" title="Become a fan"></a></li>
-						<li><a href="http://www.youtube.com" class="poshytip youtube" target="_blank" title="View our videos"></a></li>
+						<li><a href="https://www.facebook.com/teamexe/" target="_blank" class="poshytip  facebook" title="Become a fan"></a></li>
+            <li><a href="https://www.youtube.com/channel/UCTIpvLaM1G-uUsthgCDauKw" class="poshytip youtube" target="_blank" title="View our videos"></a></li>
 					</ul>
 					<!-- ENDS Social -->
 					<div id="to-top" class="poshytip" title="To top"></div>
