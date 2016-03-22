@@ -34,7 +34,7 @@
   			mysqli_query($con,"UPDATE information set level='$level' where username='$user'");
   			$level++;
   			$var="";
-  			header("Location:paradox.php");
+  			//header("Location:paradox.php");
   	}	
   	else{
   			if($answer!="")
