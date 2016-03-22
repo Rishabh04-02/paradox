@@ -10,8 +10,13 @@
 
   <title>Paradox</title>
 
+<<<<<<< HEAD:php/register.php
     <link rel="stylesheet" href="../css/register.css">
    <script type="text/javascript">
+=======
+    <link rel="stylesheet" href="css/register.css">
+    <script type="text/javascript">
+>>>>>>> a81b1877a2a23e739bf285410988c407f3fa01a8:register.php
     function validate()
       {
         if(document.signup.user.value=="")
@@ -75,11 +80,15 @@
             <table cellspacing="1" cellpadding="1" border="0">
               <tr>
                 <td><label for="user"><h2>Username:</h2></label></td>
+<<<<<<< HEAD:php/register.php
                 <td><input type="text" name="user" id="user" placeholder="  Username" class="textfield" pattern="[A-Za-z]+" value = "" required oninvalid="setCustomValidity('Username cannot be empty and ')"
                   onchange="try{setCustomValidity('')}catch(e){}"
                 >
                 </td> 
 
+=======
+                <td><input type="text" name="user" id="user" pattern="[a-z]*" title="use only alphabets lowercase a-z" placeholder="  Username" class="textfield"></td>
+>>>>>>> a81b1877a2a23e739bf285410988c407f3fa01a8:register.php
                 <td><input type="button" id="check_username_availability" class="checkbut" value="Check availability"> <div id="username_availability_result"></div></td>
               </tr>
               <tr>
@@ -107,7 +116,7 @@
 
   <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
 
-  <script src="../js/index.js"></script>
+  <script src="js/index.js"></script>
   <script type="text/javascript">
       
       $(document).ready(function()
