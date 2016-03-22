@@ -94,13 +94,7 @@ a:hover {
 }
 .image
 {
-  height:630px;
-  width:600px;
-  position:relative;
-  margin-left: auto;
-  margin-right:auto;
-  background-color: green;
-  top:-30px;
+padding-left: 30%;
 }
 .leaderboard{
   float: right;

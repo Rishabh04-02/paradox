@@ -10,6 +10,7 @@
 
 
 <?php
+$con=mysqli_connect("localhost","root","hey","paradox");
 
 $connection=mysql_connect("localhost","root","hey")
             or die("Couldn't connect to server");
@@ -28,9 +29,13 @@ $connection=mysql_connect("localhost","root","hey")
             echo "</tr>";
 
 //mysql_fetch_array("SELECT AES_DECRYPT(question, 'key'), AES_DECRYPT(answer, 'key') FROM questions");
-            $sql = 'SELECT question, answer FROM questions';
-            $retval = mysql_query( $sql, $connection );
+            //$sql = 'SELECT question, answer FROM questions';
+            //$retval = mysql_query( $sql, $connection );
             //printing all the data from database
+            $result1=mysqli_query($con,"SELECT AES_DECRYPT(answer,'key') from questions where ind='9'");
+      $out1=mysqli_fetch_array($result1);
+      $anss=$out1['answer'];
+    echo "$out1<br>$result1";
 
 
 //   while($row=mysql_fetch_array($result))

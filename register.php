@@ -70,7 +70,7 @@
             <table cellspacing="1" cellpadding="1" border="0">
               <tr>
                 <td><label for="user"><h2>Username:</h2></label></td>
-                <td><input type="text" name="user" id="user" pattern="[a-z],[0-9]*" placeholder="  Username" class="textfield"></td>
+                <td><input type="text" name="user" id="user" pattern="[a-z]*" title="use only alphabets lowercase a-z" placeholder="  Username" class="textfield"></td>
                 <td><input type="button" id="check_username_availability" class="checkbut" value="Check availability"> <div id="username_availability_result"></div></td>
               </tr>
               <tr>
@@ -79,11 +79,11 @@
               </tr>
               <tr>
                 <td><label for="pwd1"><h2>Enter Password:</h2><label></td>
-                <td><input type="password" name="pwd1" id="pwd1" pattern="[a-z],[0-9]*" placeholder="  Password" class="textfield"></td>
+                <td><input type="password" name="pwd1" id="pwd1" placeholder="  Password" class="textfield"></td>
               </tr>
               <tr>
                 <td><label for="pwd2"><h2>Re-Enter Password:</h2><label></td>
-                <td><input type="password" name="pwd2" id="pwd2" pattern="[a-z],[0-9]*" placeholder="  Re-Enter Password" class="textfield"></td>
+                <td><input type="password" name="pwd2" id="pwd2" placeholder="  Re-Enter Password" class="textfield"></td>
               </tr>
               <tr>
                 <td></td>

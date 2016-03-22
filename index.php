@@ -29,7 +29,6 @@
 </head>
 
 <body>
-
   <div id="wrap">
   <div id="regbar">
     <div id="navthing">
@@ -42,7 +41,7 @@
            <fieldset>
             <form action="login.php" method="post" name="login" onsubmit="return(validate());">
              <label name="user">Username</label>
-             <input type="text" pattern="[a-z],[0-9]*" name="user" value="" />
+             <input type="text" pattern="[a-z]*" name="user" title="use only alphabets lowercase a-z" />
              <label name="password">Password</label>
              <input type="password" name="password" />
              <input type="submit" value="Login" />
@@ -55,7 +54,7 @@
   </div>
 </div>
 <div class="image">
-  <img src="images/1.png" width="600px" height="630px">
+  <img src="this.jpg" width="600px">
   <div>
 
   <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
