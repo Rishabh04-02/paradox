@@ -54,21 +54,7 @@ body {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-/* Scroll To Bottom 
-#codepen, #portfolio {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  background: #363636;
-  width: 56px;
-  height: 56px;
-  border-radius: 100%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-  color: #ffffff;
-  text-align: center;
-}*/
+
 #codepen i, #portfolio i {
   line-height: 56px;
 }
@@ -76,16 +62,7 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-/* CodePen 
-#portfolio {
-  bottom: 96px;
-  right: 36px;
-  background: #00BCD4;
-  width: 44px;
-  height: 44px;
-  -webkit-animation: buttonFadeInUp 1s ease;
-  animation: buttonFadeInUp 1s ease;
-}*/
+
 #portfolio i {
   line-height: 44px;
 }
@@ -304,7 +281,8 @@ body {
 .card .button-container button:hover, .card .button-container button:active, .card .button-container button:focus {
   border-color: #00BCD4;
 }
-.card .button-container button:hover span, .card .button-container button:active span, .card .button-container button:focus span {
+.card .button-container button:hover span, .card .button-container button:active span, .card .button-container
+ button:focus span {
   color: #00BCD4;
 }
 .card .button-container button:active span, .card .button-container button:focus span {

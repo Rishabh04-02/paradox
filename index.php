@@ -116,7 +116,7 @@
       
         <button type="submit"><span>Login</span></button>
       </div>
-      <div class="footer"><a>Click on the pencil above to register</a></div>
+      <div class="footer"><a>Click on the pencil icon to register</a></div>
     </form>
   </div>
   <div class="card alt">
