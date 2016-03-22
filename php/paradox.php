@@ -6,6 +6,7 @@
   		echo "could not connect";
   	}
   	session_start();
+
   	if(!isset($_SESSION['user']))
   	{
   		header("Location:index.php");
@@ -14,12 +15,38 @@
     $result=mysqli_query($con,"SELECT * from information where username='$user'");
     $out=mysqli_fetch_array($result);
     $level=$out['level']+1;
-    $imgsrc = mysqli_query($con, "SELECT * FROM questions where level='$level'")
+    $imgsrc = mysqli_query($con, "SELECT * FROM questions where level='$level'");
+    $answer=$_POST['ans'];
+  	$result1=mysqli_query($con,"SELECT answer from questions where ind='$level'");
+  	$out1=mysqli_fetch_array($result1);
+  	$anss=$out1['answer'];
+  	$anss=strtolower($anss);
+  	$answer=strtolower($answer);
+  	$check=0;
+  	$maxques=mysqli_query($con,"SELECT max(ind) from questions");
+  	$maxx=mysqli_fetch_array($maxques);
+  	echo $maxx[0];
+  	if (strcmp($anss, $answer)==0 && $level==$maxx[0]) {
+  			$var="";
+  			header("Location:end.php");
+  	}
+  	else if (strcmp($anss, $answer)==0){
+  			mysqli_query($con,"UPDATE information set level='$level' where username='$user'");
+  			$level++;
+  			$var="";
+  			header("Location:paradox.php");
+  	}	
+  	else{
+  			if($answer!="")
+  				$var="Wrong answer. Please try again!";
+  	}
+
 ?>
 
 <!DOCTYPE  html>
 <html>
 	<head>
+		<?php session_start($user); ?>
 		<meta charset="utf-8">
 		<title>Paradox - <?php echo $user;  ?></title>
 		
@@ -66,10 +93,32 @@
 		<link rel="stylesheet" href="js/poshytip-1.0/src/tip-yellowsimple/tip-yellowsimple.css" type="text/css" />
 		<script type="text/javascript" src="js/poshytip-1.0/src/jquery.poshytip.min.js"></script>
 		<!-- ENDS poshytip -->
-		
-		
-		
-		
+		<style type="text/css">
+				#invalidres{
+					color: red;
+				}
+		</style>
+		<script type="text/javascript">
+				function changeText()
+				{
+					 document.getElementById('subbutton').innerHTML = 'Fred Flinstone';
+				}	
+		</script>
+		<script type="text/javascript">
+    
+   		 history.pushState(null, null, 'paradox.php');
+  	  window.addEventListener('popstate', function(event) {
+   			 history.pushState(null, null, 'paradox.php');
+   			 });
+   //  	function preventBack() {
+   //  			window.history.forward();
+			// }
+ 		// 	window.onunload = function() {
+   //  				null;	
+			// };
+			// setTimeout("preventBack()",-1);
+</script>
+
 
 	</head>
 	
@@ -108,9 +157,14 @@
 						<img src="<?php echo $imgsrc; ?>" height="300px" width="750px"  />
 						<br/>
             <div id="form">
-						<form action="submitres.php" method="post" name="paradox" onsubmit="return(validate());">
-      <input type="text" placeholder="Your Answer Here" name="ans" id="txtfield"><br/>
-      <input type="submit" value="SUBMIT" id="button" class="but">
+	<form id="para" action="" method="post" name="paradox"  onsubmit="return(validate());">
+      <input type="text" placeholder="Your Answer Here" name="ans" id="txtfield" required >
+   		 <?php 
+      	echo "<span id='invalidres'>{$var}</span>";
+       ?>
+      <br/>
+      <br>	
+      <button type="submit" value="SUBMIT" id="subbutton" class="but" >Submit</button>
     </form>
     </div>
 					</div>

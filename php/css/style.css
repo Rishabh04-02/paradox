@@ -11,6 +11,12 @@
 
 /* HACKS ------------------------------------------------------------*/
 
+.myclass{
+	color: red;
+	position: absolute;
+	margin-top: 450px;
+	margin-left:440px;
+}
 .clear{
 	clear:both;
 	height:1px;

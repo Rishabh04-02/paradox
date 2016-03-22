@@ -164,7 +164,7 @@
          </style>
        </head>
        <body onload="javascript:func()">
-              <div id="bg_mask">
+              <div id="bg_maskexit">
                 <div id="front_layer">
                   <p id="text">Wrong Answer</p>
                   <a href="paradox.php"><input type="button" value="OK" id="but"/></a>

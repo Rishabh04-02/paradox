@@ -14,12 +14,27 @@
     {
     	$user=$_POST["user"];
     	$inst=$_POST["inst"];
+      $usernameErr="";
+      $emailErr="";
+      if( $user) {
+          
+            if (preg_match("/[^A-Za-z'-]/",$_POST['name'] )) {
+               $usernameErr="username must contain only letter and whitespaces only";
+            }
+      }
+      
+      if($inst){
+            if (!filter_var($inst, FILTER_VALIDATE_EMAIL)) {
+              $emailErr = "Invalid email format";
+            }
+       }
+
     	$pwd=md5(mysqli_real_escape_string($con,$_POST["pwd1"]));
     	$result=mysqli_query($con,"SELECT * FROM information where username='$user'");
     	if(mysqli_num_rows($result)>0)
     	{   
     		echo "Username not available." ;
-		}
+		  }
 		else
 		{   
  			      mysqli_query($con, "INSERT INTO information VALUES('$user', '$inst','$pwd','0')");
@@ -28,7 +43,7 @@
             if($out)
             {
               $_SESSION['user']=$out['username'];
-              header("Location:paradox.php");
+              header("Location:loginafterregister.php");
           	}
           	else
           	{
