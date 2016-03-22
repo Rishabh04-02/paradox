@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<?php 
-
- ?>
 <html>
 
 <head>
@@ -10,13 +7,8 @@
 
   <title>Paradox</title>
 
-<<<<<<< HEAD:php/register.php
-    <link rel="stylesheet" href="../css/register.css">
-   <script type="text/javascript">
-=======
     <link rel="stylesheet" href="css/register.css">
     <script type="text/javascript">
->>>>>>> a81b1877a2a23e739bf285410988c407f3fa01a8:register.php
     function validate()
       {
         if(document.signup.user.value=="")
@@ -24,7 +16,6 @@
           alert("Please enter your Username.");
           document.signup.user.focus();
           return false;
-    
         }
         if(document.signup.inst.value=="")
         {
@@ -46,8 +37,7 @@
         }
         if(document.signup.pwd1.value!=document.signup.pwd2.value)
         {
-         // alert("The Passwords entered did not match");
-          document.getElementById('invalidreturn').innerHTML="Passwords do not match";
+          alert("The Passwords entered did not match");
           document.signup.pwd2.focus();
           return false;
         }
@@ -80,31 +70,21 @@
             <table cellspacing="1" cellpadding="1" border="0">
               <tr>
                 <td><label for="user"><h2>Username:</h2></label></td>
-<<<<<<< HEAD:php/register.php
-                <td><input type="text" name="user" id="user" placeholder="  Username" class="textfield" pattern="[A-Za-z]+" value = "" required oninvalid="setCustomValidity('Username cannot be empty and ')"
-                  onchange="try{setCustomValidity('')}catch(e){}"
-                >
-                </td> 
-
-=======
                 <td><input type="text" name="user" id="user" pattern="[a-z]*" title="use only alphabets lowercase a-z" placeholder="  Username" class="textfield"></td>
->>>>>>> a81b1877a2a23e739bf285410988c407f3fa01a8:register.php
                 <td><input type="button" id="check_username_availability" class="checkbut" value="Check availability"> <div id="username_availability_result"></div></td>
               </tr>
               <tr>
-                <td><label for="inst"><h2>E-mail:</h2></label></td>
-                <td><input type="email" name="inst" id="inst" placeholder="  E-mail" class="textfield" required></td>
+                <td><label for="inst"><h2>Contact Number:</h2></label></td>
+                <td><input type="text" name="inst" id="inst" placeholder="  Contact Number" class="textfield"></td>
               </tr>
               <tr>
                 <td><label for="pwd1"><h2>Enter Password:</h2><label></td>
-                <td><input type="password" name="pwd1" id="pwd1" placeholder="  Password" class="textfield"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" oninvalid="setCustomValidity('Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters')" required></td>
+                <td><input type="password" name="pwd1" id="pwd1" placeholder="  Password" class="textfield"></td>
               </tr>
               <tr>
                 <td><label for="pwd2"><h2>Re-Enter Password:</h2><label></td>
-                <td><input type="password" name="pwd2" id="pwd2" placeholder="  Re-Enter Password" class="textfield" oninvalid=""></td>
-                 <td><span id="invalidreturn" class="invalidclass"></span></td>
+                <td><input type="password" name="pwd2" id="pwd2" placeholder="  Re-Enter Password" class="textfield"></td>
               </tr>
-
               <tr>
                 <td></td>
                 <td><input type="submit" value="Sign-Up" id="button"></td>

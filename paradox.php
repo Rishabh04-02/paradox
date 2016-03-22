@@ -15,19 +15,18 @@
     $result=mysqli_query($con,"SELECT * from information where username='$user'");
     $out=mysqli_fetch_array($result);
     $level=$out['level']+1;
-<<<<<<< HEAD:php/paradox.php
     $imgsrc = mysqli_query($con, "SELECT * FROM questions where level='$level'");
     $answer=$_POST['ans'];
   	$result1=mysqli_query($con,"SELECT answer from questions where ind='$level'");
   	$out1=mysqli_fetch_array($result1);
   	$anss=$out1['answer'];
-  	$anss=strtolower($anss);
-  	$answer=strtolower($answer);
-  	$check=0;
   	$maxques=mysqli_query($con,"SELECT max(ind) from questions");
   	$maxx=mysqli_fetch_array($maxques);
+  	echo "hello";
   	echo $maxx[0];
-  	if (strcmp($anss, $answer)==0 && $level==$maxx[0]) {
+
+  	$check=0;
+  	if (strcmp($anss, $answer)==0 && $level==23) {
   			$var="";
   			header("Location:end.php");
   	}
@@ -42,14 +41,6 @@
   				$var="Wrong answer. Please try again!";
   	}
 
-=======
-
-  	$answer=$_POST['ans'];
-  	$result1=mysqli_query($con,"SELECT ans from questions where ind='$level'");
-  	$out1=mysqli_fetch_array($result1);
-  	$anss=$out1['answer'];
-  	
->>>>>>> a81b1877a2a23e739bf285410988c407f3fa01a8:paradox.php
 ?>
 
 <!DOCTYPE  html>
@@ -143,11 +134,10 @@
 					<div class="wrapper">
 						<!-- Navigation -->
 						<ul id="nav" class="sf-menu">
-            <li><h1><a href="">Paradox</a></h1></li>
-							<li class="current-menu-item"><h2><a href="">Welcome <?php echo $user; ?></a></h2></li>
-							<li><h2><a href="logout.php">Logout</a></h2></li>
-							<li><h2><a href="leader.php" id="leaderboard">Leaderboard</a></h2></li>
-						</h2></ul>
+            <li><a href="">Paradox</a></li>
+							<li class="current-menu-item"><a href="">Welcome <?php echo $user; ?></a></li>
+							<li><a href="logout.php">Logout</a></li>
+						</ul>
 						<!-- Navigation -->
 					</div>
 					<!-- wrapper-menu -->
@@ -164,7 +154,6 @@
 					<div class="clear"></div>
 					<div id="headline">
           <h1><b>Level <?php echo "$level";?></b></h1>
-<<<<<<< HEAD:php/paradox.php
 						<img src="<?php echo $imgsrc; ?>" height="300px" width="750px"  />
 						<br/>
             <div id="form">
@@ -176,15 +165,6 @@
       <br/>
       <br>	
       <button type="submit" value="SUBMIT" id="subbutton" class="but" >Submit</button>
-=======
-
-						<img src="<?php echo $level; ?>.jpg" width="750px"  />
-						<br/>
-            <div id="form">
-						<form action="submitres.php" method="post" name="paradox" onsubmit="return(validate());">
-      <input type="text" placeholder="Your Answer Here" name="answ" id="txtfield"><br/>
-      <input type="submit" value="SUBMIT" id="button" class="but">
->>>>>>> a81b1877a2a23e739bf285410988c407f3fa01a8:paradox.php
     </form>
     </div>
 					</div>
@@ -200,11 +180,15 @@
 				<!-- wrapper-bottom -->
 				<div class="wrapper">
 
-					<div id="bottom-text">&copy; : All Rights Reserved <a href="http://teamexe.in" target="_blank"> Team .EXE </a> 
+					<div id="bottom-text">2011 Nova all rights reserved. <a href="http://www.luiszuno.com"> Luiszuno.com</a> 
 					</div>
 					<!-- Social -->
 					<ul class="social ">
 						<li><a href="http://www.facebook.com" class="poshytip  facebook" title="Become a fan"></a></li>
+						<li><a href="http://www.twitter.com" class="poshytip twitter" title="Follow our tweets"></a></li>
+						<li><a href="http://www.dribbble.com" class="poshytip dribbble" title="View our work"></a></li>
+						<li><a href="http://www.addthis.com" class="poshytip addthis" title="Tell everybody"></a></li>
+						<li><a href="http://www.vimeo.com" class="poshytip vimeo" title="View our videos"></a></li>
 						<li><a href="http://www.youtube.com" class="poshytip youtube" title="View our videos"></a></li>
 					</ul>
 					<!-- ENDS Social -->

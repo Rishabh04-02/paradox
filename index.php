@@ -30,7 +30,7 @@
       }
       else
       {   
-        $var="wrong";
+        $var="* Wrong 'Username' or 'Password'";
       }
     }
 ?>
@@ -44,16 +44,11 @@
 
     <link rel="stylesheet" href="css/reset2.css">
 
-<<<<<<< HEAD:php/index.php
     <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
 <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
 
         <link rel="stylesheet" href="css/style2.css">
         <script type="text/javascript">
-=======
-    <link rel="stylesheet" href="css/style.css">
-  <script type="text/javascript">
->>>>>>> a81b1877a2a23e739bf285410988c407f3fa01a8:index.php
       function validate()
       {
         if(document.login.user.value=="")
@@ -71,7 +66,6 @@
       }
   </script>
 
-<<<<<<< HEAD:php/index.php
   <script type="text/javascript">
     function validatereg()
       {
@@ -113,9 +107,14 @@
 
 
       </div>
+        <div class="something-Wrong">
+          
+            <span><?php echo "<p>{$var}</p>"; ?></span>
+          
+        </div>
 
       <div class="button-container">
-      <span><?php echo "<p>{$var}</p>"; ?></span>
+      
         <button type="submit"><span>Go</span></button>
       </div>
       <div class="footer"><a href="#">Forgot your password?</a></div>
@@ -154,30 +153,6 @@
         <input type="password" id="Repeat Password" name="pwd2" required="required"/>
         <label for="Repeat Password">Repeat Password</label>
         <div class="bar"></div>
-=======
-</head>
-
-<body>
-  <div id="wrap">
-  <div id="regbar">
-    <div id="navthing">
-      <h2><a href="#" id="loginform">Login</a> | <a href="register.php">Register</a></h2>
-      <h2 class="leaderboard"><a href="leader.php" id="leaderboard">Leaderboard</a></h2>
-    <div class="login">
-      <div class="arrow-up"></div>
-      <div class="formholder">
-        <div class="randompad">
-           <fieldset>
-            <form action="login.php" method="post" name="login" onsubmit="return(validate());">
-             <label name="user">Username</label>
-             <input type="text" pattern="[a-z]*" name="user" title="use only alphabets lowercase a-z" />
-             <label name="password">Password</label>
-             <input type="password" name="password" />
-             <input type="submit" value="Login" />
-            </form>
-           </fieldset>
-        </div>
->>>>>>> a81b1877a2a23e739bf285410988c407f3fa01a8:index.php
       </div>
       <div class="button-container">
         <button type="submit"><span>Next</span></button>
@@ -185,23 +160,13 @@
     </form>
   </div>
 </div>
-<<<<<<< HEAD:php/index.php
 <!-- Portfolio--><a id="portfolio" href="http://andytran.me/" title="View my portfolio!"><i class="fa fa-link"></i></a>
 <!-- CodePen--><a id="codepen" href="http://codepen.io/andytran/" title="Follow me!"><i class="fa fa-codepen"></i></a>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
         <script src="js/index2.js"></script>
-=======
-<div class="image">
-  <img src="this.jpg" width="600px">
-  <div>
->>>>>>> a81b1877a2a23e739bf285410988c407f3fa01a8:index.php
 
 
-<<<<<<< HEAD:php/index.php
-=======
-  <script src="js/index.js"></script>
->>>>>>> a81b1877a2a23e739bf285410988c407f3fa01a8:index.php
 
 
   </body>
