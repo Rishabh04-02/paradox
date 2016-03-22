@@ -1323,17 +1323,23 @@ h6{ font-size: 20px; }
 #bottom{
 	position: relative;
 	width: 100%;
-	font-size: 12px;
+	font-size: 13px;
 	line-height: 1.5em;
 	line-height: 60px;
 	color: #868686;
 	background: #222426 url(../img/bottom-shadow.png) repeat-x;
+	padding-bottom: 0px;
 }
 
 #bottom #bottom-text{
 	width: 600px;
 	overflow: hidden;
 	margin-left: 30px;	
+}
+#bottom #bottom-text a:hover{
+	width: 600px;
+	text-transform: uppercase;
+	
 }
 
 #bottom a{

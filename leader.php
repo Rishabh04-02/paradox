@@ -1,6 +1,6 @@
 <?php
-  $con=mysqli_connect("localhost","root","strongpassword","paradox");
-	//$con=mysqli_connect("localhost","hillfh72_nimbus","nimbus@nith","hillfh72_nimbus_paradox");
+  $con=mysqli_connect("localhost","root","hey","paradox");
+	
 	if (!$con)
  	 {
  		 die('Could not connect: ' . mysqli_error());

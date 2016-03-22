@@ -1,5 +1,5 @@
 <?php
-  $con=mysqli_connect("localhost","root","strongpassword","paradox");
+  $con=mysqli_connect("localhost","root","hey","paradox");
   if (!$con)
    {
      die('Could not connect: ' . mysqli_error());
@@ -30,7 +30,7 @@
       }
       else
       {   
-        $var="* Wrong 'Username' or 'Password'";
+        $var="Wrong 'Username' or 'Password'";
       }
     }
 ?>
@@ -44,8 +44,7 @@
 
     <link rel="stylesheet" href="css/reset2.css">
 
-    <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
-<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    
 
         <link rel="stylesheet" href="css/style2.css">
         <script type="text/javascript">
@@ -113,11 +112,11 @@
           
         </div>
 
-      <div class="button-container">
+      <div class="button-container" title="Register">
       
-        <button type="submit"><span>Go</span></button>
+        <button type="submit"><span>Login</span></button>
       </div>
-      <div class="footer"><a href="#">Forgot your password?</a></div>
+      <div class="footer"><a>Click on the pencil above to register</a></div>
     </form>
   </div>
   <div class="card alt">
@@ -126,26 +125,19 @@
       <div class="close"></div>
     </h1>
 
-    <form action="signingup.php" method="post" name="signup" onsubmit="return(validatereg());">
+    <form action="loginafterregister.php" method="post" name="signup" onsubmit="return(validatereg());">
       <div class="input-container">
-        <input type="text" id="Username" name="user"required="required"/>
-        <label for="Username">Username</label>
-        <div class="bar"></div>
-      </div>
-     <!--  <div class="input-container">
-        <input type="text" id="Username" name="user"required="required"/>
+        <input type="text" id="Username" name="user" oninvalid="setCustomValidity('Username can only contain characters a-z,A-Z & 0-9')" pattern="[A-Za-z0-9]{2,15}" required="required"/>
         <label for="Username">Username</label>
         <div class="bar"></div>
       </div>
       <div class="input-container">
-        <input type="text" id="Username" name="user"required="required"/>
-        <label for="Username">Username</label>
+        <input type="number" id="phone" pattern="[0-9]{10,12}" name="phn" required="required"/>
+        <label for="Password">Mobile no.</label>
         <div class="bar"></div>
-      </div> -->
-
-
+      </div>
       <div class="input-container">
-        <input type="password" id="Password" pattern="[A-Za-z0-9]{8,30}" oninvalid="setCustomValidity('Password can only contain alpha numeric characters')" name="pwd1" required="required"/>
+        <input type="password" id="Password" pattern="[A-Za-z0-9]{5,30}" oninvalid="setCustomValidity('Password can only contain alpha numeric characters')" name="pwd1" required="required"/>
         <label for="Password">Password</label>
         <div class="bar"></div>
       </div>
@@ -155,14 +147,12 @@
         <div class="bar"></div>
       </div>
       <div class="button-container">
-        <button type="submit"><span>Next</span></button>
+        <button type="submit"><span>Register</span></button>
       </div>
     </form>
   </div>
 </div>
-<!-- Portfolio--><a id="portfolio" href="http://andytran.me/" title="View my portfolio!"><i class="fa fa-link"></i></a>
-<!-- CodePen--><a id="codepen" href="http://codepen.io/andytran/" title="Follow me!"><i class="fa fa-codepen"></i></a>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="js/register.min.js"></script>
 
         <script src="js/index2.js"></script>
 
