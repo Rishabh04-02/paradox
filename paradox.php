@@ -22,6 +22,8 @@
   	$anss=$out1['answer'];
   	$maxques=mysqli_query($con,"SELECT max(ind) from questions");
   	$maxx=mysqli_fetch_array($maxques);
+  	$anss=strtolower($anss);
+  	$answer=strtolower($answer);
   
   	$check=0;
   	if (strcmp($anss, $answer)==0 && $level==$maxx[0]) {
