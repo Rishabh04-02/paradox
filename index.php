@@ -1,11 +1,19 @@
 <?php
-  $con=mysqli_connect("localhost","root","hey","paradox");
+  $con=mysqli_connect("localhost","root","strongpassword","paradox");
   if (!$con)
    {
      die('Could not connect: ' . mysqli_error());
       echo "could not connect";
     }
+
+
     session_start();
+    if($_SESSION['sessvar']!="")
+        $sessvar=$_SESSION['sessvar'];
+      
+     session_destroy();
+     session_start();
+
     if($_POST==NULL)
     {
       $var="";
@@ -87,12 +95,13 @@
 <!-- Pen Title-->
 <div class="pen-title">
   <h1>Paradox</h1>
+  <h2><?php echo $sessvar; ?></h2>
 </div>
 <div class="container">
   <div class="card"></div>
   <div class="card">
     <h1 class="title">Login</h1>
-    <form action="loginafterregister.php" name="login" method="post" onsubmit="return(validate());">
+    <form action="" name="login" method="post" onsubmit="return(validate());">
       <div class="input-container">
         <input type="text" id="Username" name="user" required="required"/>
         <label for="Username">Username</label>
@@ -102,8 +111,6 @@
         <input type="password" id="Password" name="password" required="required"/>
         <label for="Password">Password</label>
         <div class="bar"></div>
-
-
 
       </div>
         <div class="something-Wrong">
@@ -125,7 +132,7 @@
       <div class="close"></div>
     </h1>
 
-    <form action="loginafterregister.php" method="post" name="signup" onsubmit="return(validatereg());">
+    <form action="signingup.php" method="post" name="signup" onsubmit="return(validatereg());">
       <div class="input-container">
         <input type="text" id="Username" name="user" oninvalid="setCustomValidity('Username can only contain characters a-z,A-Z & 0-9')" pattern="[A-Za-z0-9]{2,15}" required="required"/>
         <label for="Username">Username</label>

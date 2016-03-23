@@ -1,5 +1,5 @@
 <?php
-	$con=mysqli_connect("localhost","root","hey","paradox");
+	$con=mysqli_connect("localhost","root","strongpassword","paradox");
 	if (!$con)
  	 {
  		 die('Could not connect: ' . mysqli_error());
@@ -15,26 +15,13 @@
     	$user=$_POST["user"];
     	$inst=$_POST["inst"];
       $phone=$_POST["phn"];
-      $usernameErr="";
-      $emailErr="";
-      if( $user) {
-          
-            if (preg_match("/[A-Za-z0-9]/",$_POST['name'] )) {
-               $usernameErr="username must contain only letter and whitespaces only";
-            }
-      }
-      
-      if($inst){
-            if (!filter_var($inst, FILTER_VALIDATE_EMAIL)) {
-              $emailErr = "Invalid email format";
-            }
-       }
-
     	$pwd=md5(mysqli_real_escape_string($con,$_POST["pwd1"]));
     	$result=mysqli_query($con,"SELECT * FROM information where username='$user'");
-    	if(mysqli_num_rows($result)>0)
-    	{   
-    		echo "Username not available." ;
+    	$x=mysqli_fetch_array($result);
+      if(mysqli_num_rows($result)>0)
+    	{ 
+            $_SESSION['sessvar']="username not available";
+              echo '<META HTTP-EQUIV="Refresh" Content="0; URL=index.php">';
 		  }
 		else
 		{   
@@ -44,7 +31,8 @@
             if($out)
             {
               $_SESSION['user']=$out['username'];
-              header("Location:paradox.php");
+              $_SESSION['sessvar']="Registered successfully. Log in to continue";
+              echo '<META HTTP-EQUIV="Refresh" Content="0; URL=index.php">';
           	}
           	else
           	{
