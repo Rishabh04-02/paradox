@@ -54,6 +54,8 @@
 
       <link rel="stylesheet" href="css/reset2.css">
       <link rel="stylesheet" href="css/style2.css">
+      <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+      <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
   </head>
 
   <script type="text/javascript">
@@ -191,6 +193,7 @@
 </div>
 
 
+         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
        <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
   <script type="text/javascript">
       
