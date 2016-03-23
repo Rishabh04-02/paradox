@@ -11,6 +11,22 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.check_availaibility{
+    outline-style: none;
+}
+.errordiv{
+  position: fixed;
+  margin-bottom: 4px;
+}
+.checkbut{
+  margin-bottom: 10px;
+  outline-style: none;
+  color: red;
+}
+#username_availability_result{
+        margin-bottom: 2px;
+        color: red;
+}
 /* Pen Title */
 .pen-title {
   padding: 50px 0;
@@ -322,6 +338,9 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
   position: relative;
   margin: 0 60px 50px;
 }
+
+
+
 .card .input-container input {
   outline: none;
   z-index: 1;

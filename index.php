@@ -10,7 +10,7 @@
     session_start();
     if($_SESSION['sessvar']!="")
         $sessvar=$_SESSION['sessvar'];
-      
+
      session_destroy();
      session_start();
 
@@ -41,52 +41,64 @@
         $var="Wrong 'Username' or 'Password'";
       }
     }
+
+
 ?>
 <!DOCTYPE html>
 
 <html >
   <head>
-    <meta charset="UTF-8">
-    <title>Paradox</title>
+      <meta charset="UTF-8">
+      <title>Paradox</title>
 
 
-    <link rel="stylesheet" href="css/reset2.css">
-
-    
-
-        <link rel="stylesheet" href="css/style2.css">
-        <script type="text/javascript">
-      function validate()
-      {
-        if(document.login.user.value=="")
-        {
-          alert("Please enter your username.");
-          document.login.user.focus();
-          return false;
-        }
-        if(document.login.password.value=="")
-        {
-          alert("Please enter the password.");
-          document.login.password.focus();
-          return false;
-        }
-      }
-  </script>
+      <link rel="stylesheet" href="css/reset2.css">
+      <link rel="stylesheet" href="css/style2.css">
+  </head>
 
   <script type="text/javascript">
-    function validatereg()
+
+    function validate()
       {
-        if(document.signup.pwd1.value!=document.signup.pwd2.value)
+       
+        if(document.signup.pwd1.value=="")
         {
-         // alert("The Passwords entered did not match");
-          document.getElementById('invalidreturn').innerHTML="Passwords do not match";
+          alert("Please enter the password.");
+          document.signup.pwd1.focus();
+          return false;
+        }
+        if(document.signup.pwd2.value=="")
+        {
+          alert("Please enter the password again.");
+
           document.signup.pwd2.focus();
           return false;
         }
+        if (document.signup.phn.value!="") {
+
+        };
+        if(document.signup.pwd1.value!=document.signup.pwd2.value)
+        {
+          alert("The Passwords entered did not match");
+          document.getElementById("pwd1").value="";
+          document.getElementById("pwd2").value="";
+          document.signup.pwd2.focus();
+          return false;
+        }
+        if(document.signup.pwd1.value.length<5)
+        {
+          alert("Please enter a strong password(min length 5 characters)!")
+          document.signup.pwd1.focus();
+          return false;
+        }
+        var r=confirm("Confirming the details you have entered???")
+          if(r==true)
+            return( true );
+          else
+            return false;
       }
 
-    </script>
-  </head>
+  </script>
 
   <body>
 
@@ -101,7 +113,7 @@
   <div class="card"></div>
   <div class="card">
     <h1 class="title">Login</h1>
-    <form action="" name="login" method="post" onsubmit="return(validate());">
+    <form action="" name="login" method="post">
       <div class="input-container">
         <input type="text" id="Username" name="user" required="required"/>
         <label for="Username">Username</label>
@@ -132,24 +144,30 @@
       <div class="close"></div>
     </h1>
 
-    <form action="signingup.php" method="post" name="signup" onsubmit="return(validatereg());">
+    <form action="signingup.php" method="post" name="signup" onsubmit="return(validate());">
       <div class="input-container">
-        <input type="text" id="Username" name="user" oninvalid="setCustomValidity('Username can only contain characters a-z,A-Z & 0-9')" pattern="[A-Za-z0-9]{2,15}" required="required"/>
-        <label for="Username">Username</label>
+        <input type="text" id="user1" name="user" />
+            <label for="Username">Username</label>
+          
+             
+                  <div class="bar">
+                    
+                    <div>   <a href="#" id="check_username_availability" class="check_availaibility">check availablility</a><span id="username_availability_result"></span></div>
+                  </div><br>
+      </div>
+
+      <div class="input-container">
+        <input type="email" id="phn" name="phn" required="required"/>
+        <label for="Password">Email</label>
         <div class="bar"></div>
       </div>
       <div class="input-container">
-        <input type="number" id="phone" pattern="[0-9]{10,12}" name="phn" required="required"/>
-        <label for="Password">Mobile no.</label>
-        <div class="bar"></div>
-      </div>
-      <div class="input-container">
-        <input type="password" id="Password" pattern="[A-Za-z0-9]{5,30}" oninvalid="setCustomValidity('Password can only contain alpha numeric characters')" name="pwd1" required="required"/>
+        <input type="password" id="pwd1" pattern="[A-Za-z0-9]{5,30}" oninvalid="setCustomValidity('Password can only contain alpha numeric characters')" name="pwd1" required="required"/>
         <label for="Password">Password</label>
         <div class="bar"></div>
       </div>
       <div class="input-container">
-        <input type="password" id="Repeat Password" name="pwd2" required="required"/>
+        <input type="password" id="pwd2" name="pwd2" required="required" onchange="checkpassmatch();" />
         <label for="Repeat Password">Repeat Password</label>
         <div class="bar"></div>
       </div>
@@ -171,6 +189,58 @@
   <img src="img/yt.png"></a></li>
 </ul>
 </div>
+
+
+       <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+  <script type="text/javascript">
+      
+      $(document).ready(function()
+      {  
+            var min_chars = 3;  
+          var characters_error = ' : Minimum amount of chars is 3';  
+            var checking_html = ' : Checking...';    
+            $('#check_username_availability').click(function()
+            {   
+                if($('#user1').val().length < min_chars){    
+                  $('#username_availability_result').html(characters_error);  
+              }
+              else
+              {    
+                  $('#username_availability_result').html(checking_html);  
+                  check_availability();  
+              }  
+          });  
+  
+      });  
+    function check_availability(){  
+        var username = $('#user1').val();   
+        $.post("checkusername.php", { user1: username },  
+            function(result){    
+                if(result == 1){    
+                    $('#username_availability_result').html(' : '+username + ' is Available ');  
+                }else{    
+                    $('#username_availability_result').html(' : '+username + ' is not Available ');  
+                }  
+        });  
+  
+}  
+    </script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+            $("#pwd2").keyup(checkpassmatch);
+
+        });
+
+           function checkpassmatch(){
+              var passwd=$("#pwd1").val();
+              var cnfpasswd=$("#pwd2").val();
+              if(passwd!=cnfpasswd){
+                $("#passmismatch").html("MISjaskfdj");
+              }
+
+        });
+    </script>
+
 
   </body>
 </html>
