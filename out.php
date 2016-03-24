@@ -12,7 +12,7 @@
 <?php
 $con=mysqli_connect("localhost","root","hey","paradox");
 
-$connection=mysql_connect("localhost","root","hey")
+$connection=mysql_connect("localhost","root","strongpassword")
             or die("Couldn't connect to server");
 
             $db=mysql_select_db("paradox",$connection)
