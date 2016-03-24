@@ -159,7 +159,7 @@
       </div>
 
       <div class="input-container">
-        <input type="email" id="phn" name="phn" required="required"/>
+        <input type="email" id="phn" name="phn" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
         <label for="Password">Email</label>
         <div class="bar"></div>
       </div>
