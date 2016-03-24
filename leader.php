@@ -1,5 +1,5 @@
 <?php
-  $con=mysqli_connect("localhost","root","strongpassword","paradox");
+  $con=mysqli_connect("localhost","root","hey","paradox");
 	
 	if (!$con)
  	 {
