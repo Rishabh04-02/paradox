@@ -48,7 +48,7 @@
 <!DOCTYPE  html>
 <html>
 	<head>
-		<?php session_start($user); ?>
+		<?php session_start(); ?>
 		<meta charset="utf-8">
 		<title>Paradox - <?php echo $user;  ?></title>
 		
