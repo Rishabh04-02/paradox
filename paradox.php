@@ -1,5 +1,5 @@
 <?php
-	$con=mysqli_connect("localhost","root","strongpassword","paradox");
+	$con=mysqli_connect("localhost","root","hey","paradox");
 	if (!$con)
  	 {
  		 die('Could not connect: ' . mysqli_error());
@@ -48,7 +48,7 @@
 <!DOCTYPE  html>
 <html>
 	<head>
-		<?php session_start($user); ?>
+		<?php session_start(); ?>
 		<meta charset="utf-8">
 		<title>Paradox - <?php echo $user;  ?></title>
 		

@@ -1,5 +1,5 @@
 <?php
-  $con=mysqli_connect("localhost","root","strongpassword","paradox");
+  $con=mysqli_connect("localhost","root","hey","paradox");
   if (!$con)
    {
      die('Could not connect: ' . mysqli_error());
@@ -187,7 +187,8 @@
 <br/><br/><br/><br/>
 <ul>
   <li><a href="https://www.facebook.com/teamexe/" target="_blank"><img src="img/fb.png"></a> 
-  <a href="leader.php"><img src="img/bw.gif"></a> <a target="_blank" href="https://www.youtube.com/channel/UCTIpvLaM1G-uUsthgCDauKw">
+  <a href="leader.php"><img src="img/bw.gif" title="Leader board"></a>
+   <a target="_blank" href="https://www.youtube.com/channel/UCTIpvLaM1G-uUsthgCDauKw">
   <img src="img/yt.png"></a></li>
 </ul>
 </div>
