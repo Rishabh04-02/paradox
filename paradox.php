@@ -29,18 +29,26 @@
   	$answer=strtolower($answer);
   
   	$check=0;
-  	if (strcmp($anss, $answer)==0 && $level==$maxx[0]) {
+  	$checkwin=mysqli_query($con,"SELECT * from information where username='$user'");
+     		$checkwinarr=mysqli_fetch_array($checkwin);
+     		$checkwinresult=$checkwinarr['flag'];
+      		if($checkwinresult==1){
+      			header("Location:end.php");
+      		}else if (strcmp($anss, $answer)==0 && $level==$maxx[0]) {
   			$var="";
   			mysqli_query($con,"update information set flag=1 where username='$user'");
   			header("Location:end.php");
-  	}
+  			}
   	else if (strcmp($anss, $answer)==0){
   			mysqli_query($con,"UPDATE information set level='$level' where username='$user'");
   			$level++;
   			$var="";
+  			
   			//header("Location:paradox.php");
   	}	
   	else{
+
+
   			if($answer!="")
   				$var="Wrong answer, Please try again!";
   	}

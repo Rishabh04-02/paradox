@@ -11,7 +11,8 @@
 
 .something-Wrong{
   position: relative;
-  margin: 0 60px 50px;
+  margin: 0 10px 50px;
+  font-weight: 350;
   color: #ff0000;
 }
 

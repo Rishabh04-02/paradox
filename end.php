@@ -13,7 +13,28 @@
   	}
   	$user=$_SESSION['user'];
     ?>
-     <html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+    
+   		 history.pushState(null, null, 'paradox.php');
+  	  window.addEventListener('popstate', function(event) {
+   			 history.pushState(null, null, 'paradox.php');
+   			 });
+</script>
+	<title>
+		
+	</title>
+</head>
+<body>
+<h1>Congratulations !! You have successfully completed the paradox</h1>
+<?php require('leader.php'); ?>
+</body>
+</html>
+
+<!--      <html>
        <head>
          <title><?php echo $user; ?></title>
          <script type="text/javascript">
@@ -100,3 +121,4 @@
              </body>
        </body>
        </html>
+ -->
