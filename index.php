@@ -55,7 +55,7 @@
       <link rel="stylesheet" href="css/reset2.css">
       <link rel="stylesheet" href="css/style2.css">
       <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-      <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+      
   </head>
 
   <script type="text/javascript">
@@ -147,24 +147,24 @@
     </h1>
 
     <form action="signingup.php" method="post" name="signup" onsubmit="return(validate());">
+      
       <div class="input-container">
-        <input type="text" id="user1" name="user" />
-            <label for="Username">Username</label>
-          
-             
-                  <div class="bar">
-                    
-                    <div>   <a href="#" id="check_username_availability" class="check_availaibility">check availablility</a><span id="username_availability_result"></span></div>
-                  </div><br>
-      </div>
+        <input type="text" id="user1" name="user" required="required" pattern="[A-Za-z0-9]{}" />
+            <label for="Username">Username</label>             
+            <div class="bar"></div>
+            <a href="#" id="check_username_availability" class="check_availaibility"><button>check availablility</button></a>
+    <span id="username_availability_result"></span>
+        </div>
+      
 
       <div class="input-container">
         <input type="email" id="phn" name="phn" required="required"/>
-        <label for="Password">Email</label>
+        <label for="Phone">Email</label>
         <div class="bar"></div>
       </div>
+      
       <div class="input-container">
-        <input type="password" id="pwd1" pattern="[A-Za-z0-9]{5,30}" oninvalid="setCustomValidity('Password can only contain alpha numeric characters')" name="pwd1" required="required"/>
+        <input type="password" id="pwd1" name="pwd1" required="required"/>
         <label for="Password">Password</label>
         <div class="bar"></div>
       </div>
@@ -184,7 +184,6 @@
         <script src="js/index2.js"></script>
 
 <div id="icn" align="center">
-<br/><br/><br/><br/>
 <ul>
   <li><a href="https://www.facebook.com/teamexe/" target="_blank"><img src="img/fb.png"></a> 
   <a href="leader.php"><img src="img/bw.gif" title="Leader board"></a>
@@ -194,8 +193,9 @@
 </div>
 
 
-         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-       <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+         <script src="js/register.min.js"></script>
+        <script src="js/index2.js"></script>
+
   <script type="text/javascript">
       
       $(document).ready(function()
