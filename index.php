@@ -58,13 +58,26 @@
 <html >
   <head>
       <meta charset="UTF-8">
+      <link rel="icon" type="image/png" href="title.png">
       <title>Paradox</title>
+      <meta name="description" content="Paradox is an online event by Team .EXE which is the technical team of Computer 
+      Science & Engineering Department at NIT Hamirpur">
+        <meta name="keywords" content="paradox, paradox nith, paradox team .exe, paradox nimbus,  paradox nimbus 2016,
+        team .exe, exe, NITH , nit hamirpur, CSED, CSED NITH, team exe, paradox, web-o-magica, nimbus nith
+        nimbus 2016, nimbus 2k16, nit hamirpur, nith">
+        <meta name="author" content="Team .EXE">
+        <meta property="og:title" content="Paradox - Team .EXE">
+        <meta property="og:image" content="http://teamexe.in/images/logo.png">
+        <meta property="og:description" content="Paradox is an online event by Team .EXE which is the technical
+         team of Computer 
+      Science & Engineering Department at NIT Hamirpur">
+        <meta name="format-detection" content="+91 8091261118, +91 9805539219, +91 9805126955">
 
 
       <link rel="stylesheet" href="css/reset2.css">
       <link rel="stylesheet" href="css/style2.css">
       <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
-      <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900|RobotoDraft:400,100,300,500,700,900'>
+      
   </head>
 
   <script type="text/javascript">
@@ -117,7 +130,7 @@
 <!-- Mixins-->
 <!-- Pen Title-->
 <div class="pen-title">
-  <h1>Paradox</h1>
+  <h1>PARADOX</h1>
   <h2><?php echo $sessvar; ?></h2>
 </div>
 <div class="container">
@@ -146,7 +159,7 @@
       
         <button type="submit"><span>Login</span></button>
       </div>
-      <div class="footer"><a>Click on the pencil icon to register</a></div>
+      
     </form>
   </div>
   <div class="card alt">
@@ -156,24 +169,24 @@
     </h1>
 
     <form action="signingup.php" method="post" name="signup" onsubmit="return(validate());">
+      
       <div class="input-container">
-        <input type="text" id="user1" name="user" />
-            <label for="Username">Username</label>
-          
-             
-                  <div class="bar">
-                    
-                    <div>   <a href="#" id="check_username_availability" class="check_availaibility">check availablility</a><span id="username_availability_result"></span></div>
-                  </div><br>
-      </div>
+        <input type="text" id="user1" name="user" required="required" pattern="[A-Za-z0-9]{}" />
+            <label for="Username">Username</label>             
+            <div class="bar"></div>
+            <a href="#" id="check_username_availability" class="check_availaibility"><button>check availablility</button></a>
+    <span id="username_availability_result"></span>
+        </div>
+      
 
       <div class="input-container">
         <input type="email" id="phn" name="phn" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
         <label for="Password">Email</label>
         <div class="bar"></div>
       </div>
+      
       <div class="input-container">
-        <input type="password" id="pwd1" pattern="[A-Za-z0-9]{5,30}" oninvalid="setCustomValidity('Password can only contain alpha numeric characters')" name="pwd1" required="required"/>
+        <input type="password" id="pwd1" name="pwd1" required="required"/>
         <label for="Password">Password</label>
         <div class="bar"></div>
       </div>
@@ -193,7 +206,6 @@
         <script src="js/index2.js"></script>
 
 <div id="icn" align="center">
-<br/><br/><br/><br/>
 <ul>
   <li><a href="https://www.facebook.com/teamexe/" target="_blank"><img src="img/fb.png"></a> 
   <a href="leader.php"><img src="img/bw.gif" title="Leader board"></a>
@@ -203,14 +215,15 @@
 </div>
 
 
-         <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-       <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+         <script src="js/register.min.js"></script>
+        <script src="js/index2.js"></script>
+
   <script type="text/javascript">
       
       $(document).ready(function()
       {  
             var min_chars = 3;  
-          var characters_error = ' : Minimum amount of chars is 3';  
+          var characters_error = ' : Minimum no. of characters is 3';  
             var checking_html = ' : Checking...';    
             $('#check_username_availability').click(function()
             {   
@@ -254,6 +267,8 @@
         });
     </script>
 
-
+        <?php
+        include("indexcounter.php");
+        ?>
   </body>
 </html>
