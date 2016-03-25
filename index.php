@@ -171,7 +171,7 @@
     <form action="signingup.php" method="post" name="signup" onsubmit="return(validate());">
       
       <div class="input-container">
-        <input type="text" id="user1" name="user" required="required" pattern="[A-Za-z0-9]{}" />
+        <input type="text" id="user1" name="user" required="required" pattern="[A-Za-z0-9]+" />
             <label for="Username">Username</label>             
             <div class="bar"></div>
             <a href="#" id="check_username_availability" class="check_availaibility"><button>check availablility</button></a>
