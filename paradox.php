@@ -1,5 +1,6 @@
 <?php
-	$con=mysqli_connect("localhost","root","hey","paradox");
+
+	$con=mysqli_connect("localhost","root","strongpassword","paradox");
 	if (!$con)
  	 {
  		 die('Could not connect: ' . mysqli_error());
@@ -30,6 +31,7 @@
   	$check=0;
   	if (strcmp($anss, $answer)==0 && $level==$maxx[0]) {
   			$var="";
+  			mysqli_query($con,"update information set flag=1 where username='$user'");
   			header("Location:end.php");
   	}
   	else if (strcmp($anss, $answer)==0){
@@ -90,13 +92,6 @@
   	  window.addEventListener('popstate', function(event) {
    			 history.pushState(null, null, 'paradox.php');
    			 });
-   //  	function preventBack() {
-   //  			window.history.forward();
-			// }
- 		// 	window.onunload = function() {
-   //  				null;	
-			// };
-			// setTimeout("preventBack()",-1);
 </script>
 
 
@@ -114,7 +109,7 @@
 					<div class="wrapper">
 						<!-- Navigation -->
 						<ul id="nav" class="sf-menu">
-            <li><a><h1>Paradox</h1></a></li>
+            <li><a><h1 class="newfont">Paradox</h1></a></li>
 							<li class="current-menu-item"><a><h1>Welcome <?php echo $user; ?></h1></a></li>
 							<li><a href="logout.php"><button>Logout</button></a></li>
 							<li><a href="leader.php"><button>Leaderboard</button></a></li>

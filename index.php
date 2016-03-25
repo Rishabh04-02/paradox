@@ -1,5 +1,5 @@
 <?php
-  $con=mysqli_connect("localhost","root","hey","paradox");
+  $con=mysqli_connect("localhost","root","strongpassword","paradox");
   if (!$con)
    {
      die('Could not connect: ' . mysqli_error());
@@ -28,7 +28,15 @@
       $user=$_POST["user"];
       $pwd=md5(mysqli_real_escape_string($con,$_POST["password"]));
       $result=mysqli_query($con,"SELECT * FROM information where username='$user' and password='$pwd'");
-      if(mysqli_num_rows($result)>0)
+      $checkwin=mysqli_query($con,"SELECT * from information where username='$user'");
+      $checkwinarr=mysqli_fetch_array($checkwin);
+      $checkwinresult=$checkwinarr['flag'];
+      if($checkwinresult == 1){
+      	$_SESSION['user']=$user;
+      	header("Location:end.php");
+      }
+      else{
+      			if(mysqli_num_rows($result)>0)
       {
         $_SESSION['user']=$user;
         $out=mysqli_fetch_array($result);
@@ -39,6 +47,7 @@
       else
       {   
         $var="Wrong 'Username' or 'Password'";
+      }
       }
     }
 
@@ -102,7 +111,7 @@
 
   </script>
 
-  <body>
+  <body background="newtest.png">
 
 
 <!-- Mixins-->

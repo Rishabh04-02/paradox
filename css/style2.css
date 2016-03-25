@@ -1,15 +1,31 @@
+
+@font-face{
+  font-family: circlefont;
+  src:url(DJB Pokey Dots.ttf);  
+}
+
+
+.newfont{
+    font-family: circlefont;
+}
+
 .something-Wrong{
   position: relative;
   margin: 0 60px 50px;
   color: #ff0000;
 }
+
 body {
-  background: #e9e9e9;
+  background:url(../newtest.png);
   font-family: 'RobotoDraft', 'Ubuntu' ,'Roboto', sans-serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.home{
+    background: #e9e9e9;
+}
+
 
 .check_availaibility{
     outline-style: none;
@@ -44,7 +60,7 @@ body {
   margin: 0 0 20px;
   font-size: 50px;
   text-transform: uppercase;
-  color: #02bdd5;
+  color: #0C5F96;
   font-weight: 300;
 }
 /* these are my modifications */
@@ -74,14 +90,14 @@ font-size: 12px;
   margin: 0 0 20px;
   font-size: 50px;
   text-decoration: none;
-  color: #02bdd5;
+  color: #0C5F96;
   font-weight: 300;
 }
 .pen1-title h1:hover {
   margin: 0 0 20px;
   font-size: 50px;
   text-transform: uppercase;
-  color: #02bdd5;
+  color: #0C5F96;
   font-weight: 300;
 }
 
@@ -104,7 +120,7 @@ font-size: 12px;
 }
 .container1 table td>h1{
   text-align: center;
-  color: #02bdd5; 
+  color: #0C5F96; 
 }
 /*   */
 .container2 {
@@ -204,7 +220,7 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
 .rerun a {
   cursor: pointer;
   display: inline-block;
-  background: #00BCD4;
+  background: #0C5F96;
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   padding: 10px 20px;
@@ -326,10 +342,10 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
 .card .title {
   position: relative;
   z-index: 1;
-  border-left: 5px solid #00BCD4;
+  border-left: 5px solid #0C5F96;
   margin: 0 0 35px;
   padding: 10px 0 10px 50px;
-  color: #02bdd5;
+  color: #0C5F96;
   font-size: 32px;
   font-weight: 600;
   text-transform: uppercase;
@@ -388,7 +404,7 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
 .card .input-container .bar:before, .card .input-container .bar:after {
   content: '';
   position: absolute;
-  background: #00BCD4;
+  background: #0C5F96;
   width: 0;
   height: 2px;
   -webkit-transition: .2s ease;
@@ -402,7 +418,7 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
 }
 .card .button-container {
   margin: 0 60px;
-  color: #02bdd5;
+  color: #0C5F96;
   text-align: center;
 }
 .card .button-container button {
@@ -425,7 +441,7 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
 .card .button-container button span {
   position: relative;
   z-index: 1;
-  color: #00BCD4;
+  color: #0C5F96;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
@@ -435,7 +451,7 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
   top: 50%;
   left: 50%;
   display: block;
-  background: #00BCD4;
+  background: #0C5F96;
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -445,11 +461,11 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
   transition: .3s ease;
 }
 .card .button-container button:hover, .card .button-container button:active, .card .button-container button:focus {
-  border-color: #00BCD4;
+  border-color: #0C5F96;
 }
 .card .button-container button:hover span, .card .button-container button:active span, .card .button-container
  button:focus span {
-  color: #00BCD4;
+  color: #0C5F96;
 }
 .card .button-container button:active span, .card .button-container button:focus span {
   color: #ffffff;
@@ -495,7 +511,7 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
 }
 .card.alt .toggle {
   position: relative;
-  background: #00BCD4;
+  background: #0C5F96;
   width: 140px;
   height: 140px;
   border-radius: 100%;
@@ -566,7 +582,7 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
   border-color: #ffffff;
 }
 .card.alt .button-container button span {
-  color: #00BCD4;
+  color: #0C5F96;
 }
 .card.alt .button-container button:hover {
   background: rgba(255, 255, 255, 0.9);

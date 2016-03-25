@@ -1,5 +1,6 @@
 <?php
-	$con=mysqli_connect("localhost","root","hey","paradox");
+
+	$con=mysqli_connect("localhost","root","strongpassword","paradox");
 	if (!$con)
  	 {
  		 die('Could not connect: ' . mysqli_error());
@@ -22,6 +23,15 @@
                 document.getElementById('frontlayer').style.visibility='visible';
             }
           </script>
+
+          	<script type="text/javascript">
+    
+   		 history.pushState(null, null, 'paradox.php');
+  	  window.addEventListener('popstate', function(event) {
+   			 history.pushState(null, null, 'paradox.php');
+   			 });
+</script>
+  	
          <style type="text/css">
                 #bg_mask
                 {
@@ -33,11 +43,11 @@
                     margin: auto;
                     width: 320px;
                     height: 120px;
-                    background : #c8cccf center;
+                    background : #FAFAFA center;
                     border-width:20px;
                     border-style: solid;
                     border-radius:7px;
-                    border-color:#2c3e50;
+                    border-color:00BCD4;
                     z-index: 10;
                     visibility: hidden;
                     text-align: center;
@@ -45,7 +55,7 @@
                 }
                 #text
                 {
-                  color:#2c3e50;
+                  color:00BCD4;
                   font-weight: bold;
                   font-size: 20px;
                   font-family:"Microsoft Sans Serif";
@@ -54,12 +64,14 @@
                 {
                   height:50px;
                   width:110px;
-                  background-color: #2c3e50;
+                  background-color: 00BCD4;
                   border-right-width:5px;
                   border-bottom-width:5px;
-                  border-top-width:1px;
-                  border-left-width:1px;
+                  border-top-width:2px;
+                  border-left-width:2px;
                   border-style:outset;
+                  border-top-color:#233240;
+                  border-left-color:#233240;
                   border-bottom-color:#233240;
                   border-right-color:#233240;
                   color:white;
@@ -70,11 +82,21 @@
          </style>
        </head>
        <body onload="javascript:func()">
+           <body bgcolor="BBDEFB">
+           <body background="paradox.jpg">
               <div id="bg_mask">
                 <div id="front_layer">
+                  <p id="text"><u>CONGRATULATIONS</u></p>
                   <p id="text">You won</p>
-                  <a href="logout.php"><input type="button" value="OK" id="but"/></a>
+                  <a href="logout.php"><input type="button" value=":)" id="but"/></a>
                 </div>
-              </div>
+                  <p></p>
+                 <footer>
+                 <a href="leader.php"><input type="button" value="Leaderboard" id="but"/></a>
+                           
+                 </footer>
+              </div> 
+             </body>      
+             </body>
        </body>
        </html>
