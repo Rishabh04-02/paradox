@@ -258,6 +258,8 @@
         });
     </script>
 
-
+        <?php
+        include("indexcounter.php");
+        ?>
   </body>
 </html>

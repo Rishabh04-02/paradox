@@ -88,5 +88,8 @@
   <img src="img/yt.png"></a></li>
 </ul>
 </div>
+        <?php
+        include("leadcounter.php");
+        ?>
   </body>
 </html>

@@ -189,6 +189,8 @@
 				<!-- ENDS wrapper-bottom -->
 			</div>
 			<!-- ENDS Bottom -->
-	
+	            <?php
+				include("profilecounter.php");
+				?>
 	</body>
 </html>
