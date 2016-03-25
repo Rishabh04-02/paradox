@@ -15,6 +15,20 @@
      <html>
        <head>
          <title><?php echo $user; ?></title>
+         <link rel="icon" type="image/png" href="title.png">
+      
+      <meta name="description" content="Paradox is an online event by Team .EXE which is the technical team of Computer 
+      Science & Engineering Department at NIT Hamirpur">
+        <meta name="keywords" content="paradox, paradox nith, paradox team .exe, paradox nimbus,  paradox nimbus 2016,
+        team .exe, exe, NITH , nit hamirpur, CSED, CSED NITH, team exe, paradox, web-o-magica, nimbus nith
+        nimbus 2016, nimbus 2k16, nit hamirpur, nith">
+        <meta name="author" content="Team .EXE">
+        <meta property="og:title" content="Paradox - Team .EXE">
+        <meta property="og:image" content="http://teamexe.in/images/logo.png">
+        <meta property="og:description" content="Paradox is an online event by Team .EXE which is the technical
+         team of Computer 
+      Science & Engineering Department at NIT Hamirpur">
+        <meta name="format-detection" content="+91 8091261118, +91 9805539219, +91 9805126955">
          <script type="text/javascript">
             function func()
             {
