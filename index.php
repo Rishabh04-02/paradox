@@ -1,5 +1,5 @@
 <?php
-  $con=mysqli_connect("localhost","root","strongpassword","paradox");
+  $con=mysqli_connect("localhost","root","hey","paradox");
   if (!$con)
    {
      die('Could not connect: ' . mysqli_error());
@@ -76,7 +76,7 @@
 
       <link rel="stylesheet" href="css/reset2.css">
       <link rel="stylesheet" href="css/style2.css">
-      <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+      
       
   </head>
 
@@ -124,14 +124,31 @@
 
   </script>
 
-  <body background="newtest.png">
+  <body>
 
-
+<!-- <script>
+function changeImage() {
+    var image = document.getElementById('myImage');
+    if (image.src.match("para1")) {
+        image.src = "para2.png";
+    } else {
+        image.src = "para1.png";
+    }
+}
+</script> -->
+<script type="text/javascript">
+  function hover(element) {
+    element.setAttribute('src', 'para1.png');
+}
+function unhover(element) {
+    element.setAttribute('src', 'para2.png');
+}
+</script>
 <!-- Mixins-->
 <!-- Pen Title-->
 <div class="pen-title">
-  <h1>PARADOX</h1>
-  <h2><?php echo $sessvar; ?></h2>
+<img id="my-img" src="para1.png" width="400" onmouseover="hover(this);" onmouseout="unhover(this);" />
+    <h2><?php echo $sessvar; ?></h2>
 </div>
 <div class="container">
   <div class="card"></div>
@@ -204,6 +221,17 @@
     <script src="js/register.min.js"></script>
 
         <script src="js/index2.js"></script>
+
+
+<div class="container3">
+  <div class="card"></div>
+  <div class="card">
+    <h1 class="title">Rules</h1>
+     
+       
+</div>
+</div>
+
 
 <div id="icn" align="center">
 <ul>
