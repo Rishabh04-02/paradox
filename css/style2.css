@@ -12,7 +12,7 @@
 }
 
 body {
-  background:url(../newtest.png);
+  background-color: #9FB6CD;
   font-family: 'RobotoDraft', 'Ubuntu' ,'Roboto', sans-serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
@@ -438,7 +438,72 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
-.card .button-container button span {
+#button1 {
+  text-align: center;
+  outline: 0;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background: 0;
+  text-decoration: none;
+  width: 240px;
+  border: 2px solid #6F6C6C;
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  overflow: hidden;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+#button1 span {
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  color: #0C5F96;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+#button1 span a{
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  color: #0C5F96;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+#button1:before {
+  content: '';
+  position: absolute;
+  text-decoration: none;
+  top: 50%;
+  left: 50%;
+  display: block;
+  background: #0C5F96;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin: -15px 0 0 -15px;
+  opacity: 0;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+#button1:hover,#button1:active,#button1:focus {
+  border-color: #0C5F96;
+}
+#button1:hover span,#button1:active span,#button1:focus span {
+  color: #0C5F96;
+}
+#button1:active span,#button1:focus span {
+  color: #ffffff;
+}
+#button1:active:before,#button1:focus:before {
+  opacity: 1;
+  -webkit-transform: scale(10);
+  transform: scale(10);
+}
+#button1 span {
   position: relative;
   z-index: 1;
   color: #0C5F96;

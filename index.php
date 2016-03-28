@@ -76,10 +76,17 @@
 
       <link rel="stylesheet" href="css/reset2.css">
       <link rel="stylesheet" href="css/style2.css">
+         <script src="js/register.min.js"></script>
+        <script src="js/index2.js"></script>
+
+        
       
       
   </head>
 
+  
+
+  <body>
   <script type="text/javascript">
 
     function validate()
@@ -123,9 +130,7 @@
       }
 
   </script>
-   <script src="js/register.min.js"></script>
-        <script src="js/index2.js"></script>
-
+   
   <script type="text/javascript">
       
       $(document).ready(function()
@@ -182,8 +187,6 @@ function unhover(element) {
     element.setAttribute('src', 'para2.png');
 }
 </script>
-
-  <body>
 
 <!-- <script>
 function changeImage() {
@@ -268,15 +271,17 @@ function changeImage() {
         <button type="submit"><span>Register</span></button>
       </div>
     </form>
-  </div>
+      </div>
+      
 </div>
-    <script src="js/register.min.js"></script>
-
-        <script src="js/index2.js"></script>
-
-
-
+ 
 <div id="icn" align="center">
+<div id="button1" align="center">
+        <span><a href="rules.txt">Rules</a></span>
+      </div>
+      <div id="button1" align="center">
+        <span><a href="leader.php">Leaderboard</a></span>
+      </div><br/><br/>
 <ul>
   <li><a href="https://www.facebook.com/teamexe/" target="_blank"><img src="img/fb.png"></a> 
   <a href="leader.php"><img src="img/bw.gif" title="Leader board"></a>
