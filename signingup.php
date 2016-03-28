@@ -41,7 +41,7 @@
             if($out)
             {
               $_SESSION['user']=$out['username'];
-              $_SESSION['sessvar']="Registered successfully. Log in to continue";
+              $_SESSION['sessvar']="<br>Registered successfully. Log in to continue";
               echo '<META HTTP-EQUIV="Refresh" Content="0; URL=index.php">';
           	}
           	else
