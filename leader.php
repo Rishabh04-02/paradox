@@ -29,24 +29,27 @@
          team of Computer 
       Science & Engineering Department at NIT Hamirpur">
         <meta name="format-detection" content="+91 8091261118, +91 9805539219, +91 9805126955">
-</head>
-<body>
-<link rel="stylesheet" href="css/reset2.css">
-<link rel="stylesheet" href="css/style2.css">
-<link rel="stylesheet" href="css/style.css">
-    <script src="js/register.min.js"></script>
+        <script src="js/register.min.js"></script>
 
         <script src="js/index2.js"></script>
+        <link rel="stylesheet" href="css/reset2.css">
+<link rel="stylesheet" href="css/style2.css">
+<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/social-icons.css" type="text/css" media="screen" />
+</head>
+<body>
+
+    
+<div class="container1">
+  <div class="card"></div>
+  <div class="card">
      <div class="pen1-title">
      <ul>
        <li><a href="paradox.php"><button>Return back</button></a></li>
        </ul>
   </div>
-<div class="container1">
-  <div class="card"></div>
-  <div class="card">
     <h1 class="title">Paradox Leaderboard</h1>
+
      
         <table>
          <tr>

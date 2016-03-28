@@ -130,11 +130,9 @@
 					<div class="wrapper">
 						<!-- Navigation -->
 						<ul id="nav" class="sf-menu">
-            <li><a><h1 class="newfont">Paradox</h1></a></li>
-							<li class="current-menu-item"><a><h1>Welcome <?php echo $user; ?></h1></a></li>
-							<li><a href="logout.php"><button>Logout</button></a></li>
-							<li><a href="leader.php"><button>Leaderboard</button></a></li>
+						<li><img src="para1.png"></li>
 						</ul>
+                     							
 						<!-- Navigation -->
 					</div>
 					<!-- wrapper-menu -->
@@ -151,6 +149,14 @@
 					<div class="clear"></div>
 					<div id="headline">
           <h1><b>Level <?php echo "$level";?></b></h1>
+          <ul id="end">     <li><a><h1><?php echo $user; ?></h1></a></li>
+          <li>---------------------------</li>
+							
+							<li><a href="leader.php"><button>Leaderboard</button></a></li>
+							<li>---------------------------</li>
+							<li><a href="logout.php"><button>Logout</button></a></li>
+							
+						</ul>
 						<img src="<?php echo $imgloc; ?>" width="750px"  />
 						<br/>
             <div id="form">

@@ -105,12 +105,12 @@ body {
 	line-height: 1;
 	color: #51565b;
 	background: #f1f1f1 url(../img/bg/patterns/noise.png);
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Ubuntu', Helvetica, sans-serif;
 	font-size:  100%;
 }
 
 .wrapper{
-	width: 966px;
+	width: 100%;
 	margin: 0px auto;
 	position: relative;
 }
@@ -192,7 +192,7 @@ body {
 
 #menu{
 	width: 100%;
-	padding-top: 1px;
+	padding-top: px;
 	margin-bottom: 0px;
 	background: #f858ef; 
 	background: -webkit-gradient(linear, left top, right bottom, from(#f858ef), to(#ffe413)); 
@@ -202,7 +202,7 @@ body {
 
 #menu-holder{
 	width: 100%;
-	height: 79px;
+	height: 59px;
 	background:  url(../img/menu-bg.png) repeat-x;
 }
 
@@ -213,9 +213,9 @@ body {
 	display: block;
 	position: absolute;
 	top: 0px;
-	left: 30px;
+	left: 0px;
 	height: 79px;
-	width: 906px;
+	width: 956px;
 }
 
 #nav>li{
@@ -227,7 +227,22 @@ body {
 
 #nav>li:first-child{
 }
-
+#nav li img{
+	padding-top: 25px;
+	padding-left: 220px;
+	width: 250px;
+}
+#end{
+	float: right;
+	display: block;
+}
+#end a{
+	color: black;
+	text-decoration: bold;
+}
+#end a:hover{
+	color: grey;
+}
 
 #nav>li>a{
 	display: block;

@@ -123,6 +123,65 @@
       }
 
   </script>
+   <script src="js/register.min.js"></script>
+        <script src="js/index2.js"></script>
+
+  <script type="text/javascript">
+      
+      $(document).ready(function()
+      {  
+            var min_chars = 3;  
+          var characters_error = ' : Minimum no. of characters is 3';  
+            var checking_html = ' : Checking...';    
+            $('#check_username_availability').click(function()
+            {   
+                if($('#user1').val().length < min_chars){    
+                  $('#username_availability_result').html(characters_error);  
+              }
+              else
+              {    
+                  $('#username_availability_result').html(checking_html);  
+                  check_availability();  
+              }  
+          });  
+  
+      });  
+    function check_availability(){  
+        var username = $('#user1').val();   
+        $.post("checkusername.php", { user1: username },  
+            function(result){    
+                if(result == 1){    
+                    $('#username_availability_result').html(' : '+username + ' is Available ');  
+                }else{    
+                    $('#username_availability_result').html(' : '+username + ' is not Available ');  
+                }  
+        });  
+  
+}  
+    </script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+            $("#pwd2").keyup(checkpassmatch);
+
+        });
+
+           function checkpassmatch(){
+              var passwd=$("#pwd1").val();
+              var cnfpasswd=$("#pwd2").val();
+              if(passwd!=cnfpasswd){
+                $("#passmismatch").html("MISjaskfdj");
+              }
+
+        });
+    </script>
+    <script type="text/javascript">
+  function hover(element) {
+    element.setAttribute('src', 'para1.png');
+}
+function unhover(element) {
+    element.setAttribute('src', 'para2.png');
+}
+</script>
 
   <body>
 
@@ -136,14 +195,7 @@ function changeImage() {
     }
 }
 </script> -->
-<script type="text/javascript">
-  function hover(element) {
-    element.setAttribute('src', 'para1.png');
-}
-function unhover(element) {
-    element.setAttribute('src', 'para2.png');
-}
-</script>
+
 <!-- Mixins-->
 <!-- Pen Title-->
 <div class="pen-title">
@@ -223,15 +275,6 @@ function unhover(element) {
         <script src="js/index2.js"></script>
 
 
-<div class="container3">
-  <div class="card"></div>
-  <div class="card">
-    <h1 class="title">Rules</h1>
-     
-       
-</div>
-</div>
-
 
 <div id="icn" align="center">
 <ul>
@@ -243,57 +286,7 @@ function unhover(element) {
 </div>
 
 
-         <script src="js/register.min.js"></script>
-        <script src="js/index2.js"></script>
-
-  <script type="text/javascript">
-      
-      $(document).ready(function()
-      {  
-            var min_chars = 3;  
-          var characters_error = ' : Minimum no. of characters is 3';  
-            var checking_html = ' : Checking...';    
-            $('#check_username_availability').click(function()
-            {   
-                if($('#user1').val().length < min_chars){    
-                  $('#username_availability_result').html(characters_error);  
-              }
-              else
-              {    
-                  $('#username_availability_result').html(checking_html);  
-                  check_availability();  
-              }  
-          });  
-  
-      });  
-    function check_availability(){  
-        var username = $('#user1').val();   
-        $.post("checkusername.php", { user1: username },  
-            function(result){    
-                if(result == 1){    
-                    $('#username_availability_result').html(' : '+username + ' is Available ');  
-                }else{    
-                    $('#username_availability_result').html(' : '+username + ' is not Available ');  
-                }  
-        });  
-  
-}  
-    </script>
-      <script type="text/javascript">
-        $(document).ready(function(){
-            $("#pwd2").keyup(checkpassmatch);
-
-        });
-
-           function checkpassmatch(){
-              var passwd=$("#pwd1").val();
-              var cnfpasswd=$("#pwd2").val();
-              if(passwd!=cnfpasswd){
-                $("#passmismatch").html("MISjaskfdj");
-              }
-
-        });
-    </script>
+        
 
         <?php
         include("indexcounter.php");

@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: #C1CDCD;
+  background:url(../newtest.png);
   font-family: 'RobotoDraft', 'Ubuntu' ,'Roboto', sans-serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
@@ -47,7 +47,6 @@ body {
   text-align: center;
   letter-spacing: 2px;
 }
-}
 .pen-title h1 {
   margin: 0 0 20px;
   font-size: 50px;
@@ -67,7 +66,7 @@ font-size: 12px;
 
 }
 .pen1-title {
-  padding: 50px 0;
+  padding: 0 0;
   color: #666666;
   text-align: center;
   letter-spacing: 2px;
@@ -122,7 +121,6 @@ font-size: 12px;
 }
 /*   */
 .container2 {
-  position: relative;
   max-width: 996px;
   width: 100%;
   margin: 0 auto 100px;
@@ -131,11 +129,11 @@ font-size: 12px;
   text-align: center;
 }
 .container2 table td{
-  font-size: 25px;
+  font-size: 15px;
   text-decoration: none;
   text-align: center;
-  padding-left: 150px;
-  color: #666666;
+  padding-left: 130px;
+  color: black;
   padding-right: 100px;
 }
 #icn img{
@@ -251,9 +249,9 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
 /* Container */
 .container {
   position: relative;
-  max-width: 360px;
+  max-width: 460px;
   width: 100%;
-  padding-left: 150px;
+  margin: 0 auto 100px;
 }
 .container.active .card:first-child {
   background: #f2f2f2;
@@ -318,78 +316,6 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
           transition-delay: .7s;
 }
 
-/* Container */
-.container3 {
-  
-  max-width: 630px;
-  width: 100%;
-  padding-right: 150px;
-  float: right;
-  padding-top: 0px;
-}
-.container3.active .card:first-child {
-  background: #f2f2f2;
-  margin: 0 15px;
-}
-.container3.active .card:nth-child(2) {
-  background: #fafafa;
-  margin: 0 10px;
-}
-.container3.active .card.alt {
-  top: 20px;
-  right: 0;
-  width: 100%;
-  min-width: 100%;
-  height: auto;
-  border-radius: 5px;
-  padding: 60px 0 40px;
-  overflow: hidden;
-}
-.container3.active .card.alt .toggle {
-  position: absolute;
-  top: 40px;
-  right: -70px;
-  box-shadow: none;
-  -webkit-transform: scale(10);
-  transform: scale(10);
-  -webkit-transition: -webkit-transform .3s ease;
-  transition: -webkit-transform .3s ease;
-  transition: transform .3s ease;
-  transition: transform .3s ease, -webkit-transform .3s ease;
-}
-.container3.active .card.alt .toggle:before {
-  content: '';
-}
-.container3.active .card.alt .title,
-.container3.active .card.alt .input-container,
-.container3.active .card.alt .button-container {
-  left: 0;
-  opacity: 1;
-  visibility: visible;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
-}
-.container3.active .card.alt .title {
-  -webkit-transition-delay: .3s;
-          transition-delay: .3s;
-}
-.container3.active .card.alt .input-container {
-  -webkit-transition-delay: .4s;
-          transition-delay: .4s;
-}
-.container3.active .card.alt .input-container:nth-child(2) {
-  -webkit-transition-delay: .5s;
-          transition-delay: .5s;
-}
-.container3.active .card.alt .input-container:nth-child(3) {
-  -webkit-transition-delay: .6s;
-          transition-delay: .6s;
-}
-.container3.active .card.alt .button-container {
-  -webkit-transition-delay: .7s;
-          transition-delay: .7s;
-}
-
 /* Card */
 .card {
   position: relative;
@@ -437,7 +363,7 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
   position: relative;
   background: none;
   width: 100%;
-  height: 60px;
+  height: 42px;
   border: 0;
   color: #212121;
   font-size: 24px;
@@ -586,12 +512,13 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
 .card.alt .toggle {
   position: relative;
   background: #0C5F96;
-  width: 120px;
-  height: 120px;
+  width: 115px;
+  height: 115px;
+  border-radius: 0%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   color: #ffffff;
-  font-size: 0px;
-  line-height: 140px;
+  font-size: 38px;
+  line-height: 100px;
   text-align: center;
   cursor: pointer;
 }
@@ -599,7 +526,7 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
   content: 'Register';
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
-  font-size: 30px;
+  font-size: 25px;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -626,7 +553,7 @@ box-shadow: 6px 5px 6px rgba(0, 0, 0, 0.33), 6px 5px 6px rgba(0, 0, 0, 0.23);
   display: inline;
   color: #ffffff;
   font-size: 58px;
-  font-weight: 300;
+  font-weight: 400;
 }
 .card.alt .title .close:before {
   content: '\00d7';
