@@ -22,16 +22,16 @@
     	$emailcheck=mysqli_query($con,"SELECT * from information where phone='$phone'");
       if(mysqli_num_rows($result)>0)
     	{ 
-            $_SESSION['sessvar']="username not available";
+            $_SESSION['sessvar']="This Username is not available!";
               echo '<META HTTP-EQUIV="Refresh" Content="0; URL=index.php">';
 		  }
       else if(mysqli_num_rows($emailcheck)>0){
-         $_SESSION['sessvar']="This email is already registered";
+         $_SESSION['sessvar']="This email is already registered!";
               echo '<META HTTP-EQUIV="Refresh" Content="0; URL=index.php">';
       }
 		else
 		{   if($_POST["pwd1"]!=$_POST["pwd2"]){
-                $_SESSION['sessvar']="Passwords do not match";
+                $_SESSION['sessvar']="Passwords did not match!";
               echo '<META HTTP-EQUIV="Refresh" Content="0; URL=index.php">';
           }
           else{

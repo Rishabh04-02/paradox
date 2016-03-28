@@ -45,9 +45,14 @@
   <div class="card">
      <div class="pen1-title">
      <ul>
-       <li><a href="paradox.php"><button>Return back</button></a></li>
+     <div id="button1" align="center">
+        <span><a href="paradox.php">Return Back</a></span>
+      </div>
+       <div id="button1" align="center">
+        <span><a href="logout.php">Logout</a></span>
+      </div>
        </ul>
-  </div>
+  </div><br/>
     <h1 class="title">Paradox Leaderboard</h1>
 
      

@@ -150,14 +150,19 @@
 					<div id="headline">
           <h1><b>Level <?php echo "$level";?></b></h1>
           <ul id="end">     <li><a><h1><?php echo $user; ?></h1></a></li>
-          <li>---------------------------</li>
+                    <li><div id="button1" align="center">
+        <span><a href="leader.php" >Leaderboard</a></span>
+      </div></li>							
+							<li><div id="button1" align="center">
+        <span><a href="logout.php">Logout</a></span>
+      </div></li>
 							
-							<li><a href="leader.php"><button>Leaderboard</button></a></li>
-							<li>---------------------------</li>
-							<li><a href="logout.php"><button>Logout</button></a></li>
+							<li><div id="button1" align="center">
+        <span><a href="https://www.facebook.com/teamexe/" target="_blank">Facebook Help</a></span>
+      </div></li>
 							
 						</ul>
-						<img src="<?php echo $imgloc; ?>" width="750px"  />
+						<img src="<?php echo $imgloc; ?>" width="730px"  />
 						<br/>
             <div id="form">
 	<form id="para" action="" method="post" name="paradox"  onsubmit="return(validate());">
@@ -169,7 +174,7 @@
        
       <br/>
       <br>	
-      <button type="submit" value="SUBMIT" id="subbutton" class="but" >Submit</button>
+      <button type="submit" value="SUBMIT" id="newbut" >Submit</button>
     </form>
     </div>
 					</div>

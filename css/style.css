@@ -243,7 +243,29 @@ body {
 #end a:hover{
 	color: grey;
 }
-
+#newbut{
+	text-align: center;
+	 outline: 0;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  background: 0;
+  text-decoration: none;
+  width: 150px;
+  border: 2px solid #6F6C6C;
+  padding: 10px 10px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #0C5F96;
+  
+  text-transform: uppercase;
+  overflow: hidden;
+}
+#newbut:hover{
+	border-color: #0C5F96;
+	color: #6F6C6C;
+}
 #nav>li>a{
 	display: block;
 	font-size: 16px;

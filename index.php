@@ -78,6 +78,7 @@
       <link rel="stylesheet" href="css/style2.css">
          <script src="js/register.min.js"></script>
         <script src="js/index2.js"></script>
+        <script src="js/jquery-1.5.1.min.js"></script>
 
         
       
@@ -164,21 +165,7 @@
   
 }  
     </script>
-      <script type="text/javascript">
-        $(document).ready(function(){
-            $("#pwd2").keyup(checkpassmatch);
-
-        });
-
-           function checkpassmatch(){
-              var passwd=$("#pwd1").val();
-              var cnfpasswd=$("#pwd2").val();
-              if(passwd!=cnfpasswd){
-                $("#passmismatch").html("MISjaskfdj");
-              }
-
-        });
-    </script>
+      
     <script type="text/javascript">
   function hover(element) {
     element.setAttribute('src', 'para1.png');
@@ -202,8 +189,14 @@ function changeImage() {
 <!-- Mixins-->
 <!-- Pen Title-->
 <div class="pen-title">
-<img id="my-img" src="para1.png" width="400" onmouseover="hover(this);" onmouseout="unhover(this);" />
-    <h2><?php echo $sessvar; ?></h2>
+<img id="my-img" src="para1.png" width="400" onmouseover="hover(this);" onmouseout="unhover(this);" /><br/><br/>
+<div id="button1" align="center">
+        <span><a href="instructions.php">Instructions</a></span>
+      </div>
+      <div id="button1" align="center">
+        <span><a href="leader.php">Leaderboard</a></span>
+      </div>
+    <h2 id="newcolor"><?php echo "<br><br>"; echo $sessvar; ?></h2>
 </div>
 <div class="container">
   <div class="card"></div>
@@ -223,11 +216,11 @@ function changeImage() {
       </div>
         <div class="something-Wrong">
           
-            <span><?php echo "<p>{$var}</p>"; ?></span>
+            <span><div><?php echo "<p>{$var}</p>"; ?></div></span>
           
         </div>
 
-      <div class="button-container" title="Register">
+      <div class="button-container" title="Login">
       
         <button type="submit"><span>Login</span></button>
       </div>
@@ -263,25 +256,28 @@ function changeImage() {
         <div class="bar"></div>
       </div>
       <div class="input-container">
-        <input type="password" id="pwd2" name="pwd2" required="required" onchange="checkpassmatch();" />
-        <label for="Repeat Password">Repeat Password</label>
+        <input type="password" id="pwd2" name="pwd2" required="required" />
+        <label for="Repeat Password">Verify Password</label>
         <div class="bar"></div>
       </div>
       <div class="button-container">
         <button type="submit"><span>Register</span></button>
       </div>
     </form>
-      </div>
-      
+  </div>
 </div>
+    <script src="js/register.min.js"></script>
+
+        <script src="js/index2.js"></script>  
+</div>
+
+
+         <script src="js/register.min.js"></script>
+        <script src="js/index2.js"></script>
+        <script src="js/jquery-1.5.1.min.js"></script>
  
 <div id="icn" align="center">
-<div id="button1" align="center">
-        <span><a href="rules.txt">Rules</a></span>
-      </div>
-      <div id="button1" align="center">
-        <span><a href="leader.php">Leaderboard</a></span>
-      </div><br/><br/>
+
 <ul>
   <li><a href="https://www.facebook.com/teamexe/" target="_blank"><img src="img/fb.png"></a> 
   <a href="leader.php"><img src="img/bw.gif" title="Leader board"></a>

@@ -29,7 +29,11 @@
 	</title>
 </head>
 <body>
-<h1>Congratulations !! You have successfully completed the paradox</h1>
+<div align="center">
+<br/>
+<h1>Congratulations !! You have successfully completed the PARADOX</h1>
+<br/>
+</div>
 <?php require('leader.php'); ?>
 </body>
 </html>
