@@ -1,5 +1,5 @@
 <?php
-  $con=mysqli_connect("localhost","root","strongpassword","paradox");
+  $con=mysqli_connect("localhost","root","hey","paradox");
   if (!$con)
    {
      die('Could not connect: ' . mysqli_error());
@@ -266,7 +266,13 @@ function changeImage() {
         <input type="password" id="pwd2" name="pwd2" required="required" />
         <label for="Repeat Password">Verify Password</label>
         <div class="bar"></div>
-        
+        </div>
+
+          <div class="input-container">
+        Yes<input type="radio" name="nit" value="yes" checked>
+  No<input type="radio" name="nit" value="no">
+  <div class="bar"></div>
+          
       </div>
      
       <div class="button-container">

@@ -11,9 +11,9 @@
 
 <?php
 
-$con=mysqli_connect("localhost","root","strongpassword","paradox");
+$con=mysqli_connect("localhost","root","hey","paradox");
 
-$connection=mysql_connect("localhost","root","strongpassword")
+$connection=mysql_connect("localhost","root","hey")
             or die("Couldn't connect to server");
 
             $db=mysql_select_db("paradox",$connection)
