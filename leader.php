@@ -1,13 +1,19 @@
 <?php
 
-  $con=mysqli_connect("localhost","root","hey","paradox");
+  $con=mysqli_connect("localhost","root","strongpassword","paradox");
 	
 	if (!$con)
  	 {
  		 die('Could not connect: ' . mysqli_error());
   		echo "could not connect";
   	}
-  	$result=mysqli_query($con,"SELECT username,level from information order by level desc ");
+  	session_start();
+  	$user=$_SESSION['user'];
+  	$result=mysqli_query($con,"SELECT username,level,flag from information order by level desc ");
+  	$checkwin=mysqli_query($con,"SELECT * from information where username='$user'");
+    $checkwinarr=mysqli_fetch_array($checkwin);
+    $checkwinresult=$checkwinarr['flag'];
+
   	
 ?>
 <!DOCTYPE html>
@@ -75,6 +81,11 @@
         $i++;
         $n=$out['username'];
         $l=$out['level'];
+        if($out['flag']==1){
+        	$l="completed";
+        }
+
+       	
         ?>
         <tr>
         <td><?php echo $i;?></td>

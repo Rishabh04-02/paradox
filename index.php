@@ -1,5 +1,5 @@
 <?php
-  $con=mysqli_connect("localhost","root","hey","paradox");
+  $con=mysqli_connect("localhost","root","strongpassword","paradox");
   if (!$con)
    {
      die('Could not connect: ' . mysqli_error());
@@ -31,6 +31,7 @@
       $checkwin=mysqli_query($con,"SELECT * from information where username='$user'");
       $checkwinarr=mysqli_fetch_array($checkwin);
       $checkwinresult=$checkwinarr['flag'];
+      
       if($checkwinresult == 1){
       	$_SESSION['user']=$user;
       	header("Location:end.php");
@@ -259,10 +260,14 @@ function changeImage() {
         <input type="password" id="pwd2" name="pwd2" required="required" />
         <label for="Repeat Password">Verify Password</label>
         <div class="bar"></div>
+        
       </div>
+     
       <div class="button-container">
         <button type="submit"><span>Register</span></button>
+
       </div>
+
     </form>
   </div>
 </div>

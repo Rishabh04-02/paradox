@@ -1,6 +1,6 @@
 <?php
 
-	$con=mysqli_connect("localhost","root","hey","paradox");
+	$con=mysqli_connect("localhost","root","strongpassword","paradox");
 	if (!$con)
  	 {
  		 die('Could not connect: ' . mysqli_error());
@@ -27,15 +27,19 @@
   	$maxx=mysqli_fetch_array($maxques);
   	$anss=strtolower($anss);
   	$answer=strtolower($answer);
+
   
   	$check=0;
   	$checkwin=mysqli_query($con,"SELECT * from information where username='$user'");
-     		$checkwinarr=mysqli_fetch_array($checkwin);
-     		$checkwinresult=$checkwinarr['flag'];
+    $checkwinarr=mysqli_fetch_array($checkwin);
+    $checkwinresult=$checkwinarr['flag'];
+
       		if($checkwinresult==1){
       			header("Location:end.php");
       		}else if (strcmp($anss, $answer)==0 && $level==$maxx[0]) {
   			$var="";
+
+  			mysqli_query($con,"update information set level='$level' where username='$user'");
   			mysqli_query($con,"update information set flag=1 where username='$user'");
   			header("Location:end.php");
   			}
@@ -58,7 +62,7 @@
 <!DOCTYPE  html>
 <html>
 	<head>
-		<?php session_start(); ?>
+		<?php session_start();?>
 		<meta charset="utf-8">
 		<title>Paradox - <?php echo $user;  ?></title>
 		<link rel="icon" type="image/png" href="title.png">

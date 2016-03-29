@@ -5,6 +5,7 @@
 }
 
 .something-Wrong{
+  text-align: center;
   position: relative;
   font-size: 20px;
   margin: 0 10px 50px;
@@ -116,7 +117,7 @@ font-size: 12px;
   font-size: 25px;
   text-decoration: none;
   text-align: center;
-  padding-left: 140px;
+  padding-left: 105px;
   color: #666666;
   padding-right: 100px;
 }
