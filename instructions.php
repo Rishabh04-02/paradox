@@ -46,12 +46,12 @@
      
         <div id="this">
           <ul>
-            <li>1. You have to register yourselves on the Paradox Portal : http://www.teamexe.in/paradox<br/> to enter the competition with a valid email ID at anytime after the portal goes live.<br/>Username should not contain spaces.</li>
-            <li>2. The challenge is to find a relation between the given images which can be given a particular term,<br/> which may be alphabetic, alphanumeric or any symbol.</li>
-            <li>3. You have to submit the answer in the space below the given picture. You will be advanced to the next<br/> level if your answer is correct, or you may try again.</li>
+            <li>1. You have to register yourselves on the Paradox Portal : http://www.teamexe.in/paradox<br/> to enter the competition with a valid email ID at anytime after the portal goes live.<br/>Username should not contain spaces.</li><br/>
+            <li>2. The challenge is to find a relation between the given images which can be given a particular term,<br/> which may be alphabetic, alphanumeric or any symbol.</li><br/>
+            <li>3. You have to submit the answer in the space below the given picture. You will be advanced to the next<br/> level if your answer is correct, or you may try again.</li><br/>
             <li>4. Hints will also be given on the Facebook page of Team .eXe at regular intervals after the question is given.</li>
-            <li>5. You can have a look at the leaderboard at anytime on the Paradox page.</li>
-            <li>6. Prizes will be given to First, Second and Third participants on the leaderboard.</li>
+            <li>5. You can have a look at the leaderboard at anytime on the Paradox page.</li><br/>
+            <li>6. Prizes will be given to First, Second and Third participants on the leaderboard.</li><br/>
             <li>For any queries, contact : team.exe@gmail.com</li>
           </ul>
         </div>
