@@ -12,6 +12,9 @@
   font-weight: 550;
   color: #ff0000;
 }
+a{
+  text-decoration: none;
+}
 
 body {
   background-color: #D3D3D3;

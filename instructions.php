@@ -36,9 +36,11 @@
   </div>
   <div class="pen1-title">
      <ul>
+     <a href="paradox.php">
      <div id="button1" align="center">
-        <span><a href="paradox.php">Return Back</a></span>
+        <span>Return Back</span>
       </div>
+      </a>
        </ul>
   </div>
     <h1 class="title">Paradox Instructions</h1>

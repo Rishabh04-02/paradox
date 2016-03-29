@@ -77,7 +77,7 @@
 
       <link rel="stylesheet" href="css/reset2.css">
       <link rel="stylesheet" href="css/style2.css">
-         <script src="js/register.min.js"></script>
+        <script src="js/register.min.js"></script>
         <script src="js/index2.js"></script>
         <script src="js/jquery-1.5.1.min.js"></script>
 
@@ -190,13 +190,19 @@ function changeImage() {
 <!-- Mixins-->
 <!-- Pen Title-->
 <div class="pen-title">
+
 <img id="my-img" src="para1.png" width="400" onmouseover="hover(this);" onmouseout="unhover(this);" /><br/><br/>
-<div id="button1" align="center">
-        <span><a href="instructions.php">Instructions</a></span>
+<a href="instructions.php">
+	<div id="button1" align="center" >
+
+    	    <span>Instructions</span>
       </div>
+  </a>
+      <a href="leader.php">
       <div id="button1" align="center">
-        <span><a href="leader.php">Leaderboard</a></span>
+        <span>Leaderboard</span>
       </div>
+      </a>
     <h2 id="newcolor"><?php echo "<br><br>"; echo $sessvar; ?></h2>
 </div>
 <div class="container">
