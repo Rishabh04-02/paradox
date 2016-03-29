@@ -269,11 +269,9 @@ function changeImage() {
         </div>
 
           <div class="input-container">
-        Yes<input type="radio" name="nit" value="yes" checked>
-  No<input type="radio" name="nit" value="no">
-  <div class="bar"></div>
-          
-      </div>
+       <label>NITH Student</label><input type="checkbox" name="nit" value="nit"> 
+          <div class="bar"></div>
+          </div>      
      
       <div class="button-container">
         <button type="submit"><span>Register</span></button>
