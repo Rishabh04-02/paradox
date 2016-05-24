@@ -246,7 +246,7 @@ function changeImage() {
         <input type="text" id="user1" name="user" required="required" pattern="[A-Za-z0-9]+" />
             <label for="Username">Username</label>             
             <div class="bar"></div>
-            <a href="#" id="check_username_availability" class="check_availaibility"><button>check availablility</button></a>
+            <a href="#" id="check_username_availability" class="check_availaibility"><button style="background-color:white;">check availablility</button></a>
     <span id="username_availability_result"></span>
         </div>
       
@@ -269,7 +269,7 @@ function changeImage() {
         </div>
 
           <div class="input-container">
-       <label>NITH Student</label><input type="checkbox" name="nit" value="nit"> 
+       <label>NITH Student ?</label><input type="checkbox" name="nit" value="nit"> 
           <div class="bar"></div>
           </div>      
      

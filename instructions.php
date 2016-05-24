@@ -54,6 +54,8 @@
             <li>4. Hints will also be given on the Facebook page of Team .eXe at regular intervals after the question is given.</li>
             <li>5. You can have a look at the leaderboard at anytime on the Paradox page.</li><br/>
             <li>6. Prizes will be given to First, Second and Third participants on the leaderboard.</li><br/>
+            <li>7. The Answer may contain spaces & is case insensitive.</li><br/>
+            <li>8. The user needs to enter a genuine email id to claim prizes.</li><br/>
             <li>For any queries, contact : team.exe@gmail.com</li>
           </ul>
         </div>

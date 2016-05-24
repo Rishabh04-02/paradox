@@ -35,7 +35,12 @@
               echo '<META HTTP-EQUIV="Refresh" Content="0; URL=index.php">';
           }
           else{
- 			      mysqli_query($con, "INSERT INTO information VALUES('$user', '$phone','$pwd','0',0)");
+            if($_POST['nit']=='nit')
+   			      mysqli_query($con, "INSERT INTO information VALUES('$user', '$phone','$pwd','0',0,1)");
+             else
+                 mysqli_query($con, "INSERT INTO information VALUES('$user', '$phone','$pwd','0',0,0)");
+
+
             $uid=mysqli_query($con,"SELECT * FROM information WHERE username='$user'");
             $out=mysqli_fetch_array($uid);
             if($out)

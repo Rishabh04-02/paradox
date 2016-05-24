@@ -27,6 +27,7 @@
   	$maxx=mysqli_fetch_array($maxques);
   	$anss=strtolower($anss);
   	$answer=strtolower($answer);
+  	// echo '<meta http-equiv="refresh" content= "0;URL=" />';
 
   
   	$check=0;
@@ -65,6 +66,7 @@
 		<?php session_start();?>
 		<meta charset="utf-8">
 		<title>Paradox - <?php echo $user;  ?></title>
+
 		<link rel="icon" type="image/png" href="title.png">
            <meta name="description" content="Paradox is an online event by Team .EXE which is the technical team of Computer 
       Science & Engineering Department at NIT Hamirpur">
@@ -177,7 +179,13 @@
       </div></a></li>
 							
 						</ul>
-						<img src="<?php echo $imgloc; ?>" width="730px"  />
+						<img src="<?php 
+						$bef='34';
+						$bef1='345';
+						$aft='98';
+						$aft1='645';
+						$abc=$bef.$bef1.$level.$aft1='645'.$aft;
+						echo $abc; ?>.jpg" width="730px"  />
 						<br/>
             <div id="form">
 	<form id="para" action="" method="post" name="paradox"  onsubmit="return(validate());">
